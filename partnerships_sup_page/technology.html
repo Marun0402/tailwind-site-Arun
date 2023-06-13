@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentient</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nunito Sans";
+        }
+    </style>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@6.6"></script>
+    
+    </script>
+</head>
+
+<body>
+    
+    <header
+    class="bg-[#00050A] sticky top-0 z-[100] h-header items-center flex justify-between xl:px-[4.5rem] px-[0.5rem] md:px-[2rem]">
+    <div class="flex group lg:w-[60%] md:w-[50%] items-center">
+      <!-- Logo -->
+      <div class="flex justify-center items-center">
+        <!-- <img class="h-6" src="../img/Sentient logo white-01.png" alt="Logo" /> -->
+        <a href="../index.html">
+          <img class="w-[176px] h-[49.7px]" src="/img/Sentient logo white-01.png" alt="Logo" />
+        </a>
+      </div>
+
+      <!-- Menu Items -->
+      <nav class="md:w-[40%] w-auto hidden space-x-6 xl:flex menu-item-header ml-10 font-medium text-header-gray">
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Platform</button>
+            <div
+              class="dropdown-content absolute bg-gradient-to-r from-white via-white via-70% to-[#2F343F] to-70% bg-no-repeat bg-cover shadow z-1 rounded-2xl w-[1045px] font-normal -left-[280px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[305px]"></div>
+              <div class="flex px-[48px] pt-[32px] pb-[44px] w-full">
+                <div class="w-[166px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/build_deploy.html">BUILD & DEPLOY</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Data
+                      Modeling</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Model
+                      Optimisation</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Integrate &
+                      Chain APIs</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Measure
+                      ROI</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Cost
+                      Reduction</a>
+                  </div>
+                </div>
+                <div class="ml-[95px] mr-[47.5px] w-[119px]">
+                  <h2 class="text-black font-extrabold text-base"><a class="no-underline"
+                      href="platform_sub_page/collaborate.html">COLLABORATE</a></h2>
+                  <div class="mt-4 text-black hover:text-[#9FE870] leading-9">
+                    <a class="block no-underline" href="#">TeamSpaces</a>
+                  </div>
+                </div>
+                <div class="ml-[47.5px] w-[169px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/ml_workflows.html">ML WORKFLOWS</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Multi-cloud
+                      Workflows</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Edge
+                      Computing</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Secure
+                      Deployments</a>
+                    <a class="block no-underline" href="#">Analytics</a>
+                  </div>
+                </div>
+                <div class="pl-[68px]">
+                  <div class="">
+                    <h2 class="text-white text-xl font-bold"><a class="no-underline"
+                        href="platform_sub_page/ml_workflows.html">Our Microservices</a></h2>
+                    <div class="mt-1 text-white leading-9 font-light">
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Object Detection</a>
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Automatic Speech Recognition</a>
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Text-to-Speech</a>
+                    </div>
+                    <div class="text-white mt-[60px] flex items-center">
+                      <a>View More</a>
+                      <i class="fa fa-angle-right ml-2 md:text-base hover:text-[#9FE870]"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Solutions</button>
+            <div
+              class="dropdown-content absolute bg-gradient-to-r from-white via-white via-65% to-[#2F343F] to-65% bg-no-repeat bg-cover shadow z-1 rounded-2xl w-[843px] font-normal -left-[280px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[305px]"></div>
+              <div class="flex pl-[48px] pt-[32px] pb-[44px] w-full">
+                <div class="w-[200px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/build_deploy.html">INDUSTRY SOLUTIONS</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="solution_sub_page/manufacturing.html">Manufacturing</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="solution_sub_page/solution_media.html">Media</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="solution_sub_page/logistics.html">Logistics</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Defence</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="solution_sub_page/government.html">Government</a>
+                  </div>
+                </div>
+                <div class="ml-[95px] w-[200px]">
+                  <h2 class="text-black font-extrabold text-base"><a class="no-underline"
+                      href="platform_sub_page/collaborate.html">BY USE CASE</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Demand Forecasting</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Inventory Optimisation</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Load Planning</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Workplace Safety</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Defect Detection</a>
+                  </div>
+                </div>
+                <div class="pl-[32px] w-[300px]">
+                  <div class="">
+                    <h2 class="text-white text-xl font-bold"><a class="no-underline"
+                        href="platform_sub_page/ml_workflows.html">Unsure where to start?</a></h2>
+                    <div class="mt-1 text-white leading-9 font-light">
+                      <a class="block underline hover:text-[#9FE870]" href="#">AI Clinic - Our Diagnostic Centre</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Solutions</button>
+            <div
+              class="dropdown-content absolute bg-[#fff] shadow z-1 rounded-lg w-[800px] mt-2 font-normal -left-[280px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[300px]"></div>
+              <div class="flex p-3 w-full">
+                <div class="mx-6 w-[44%]">
+                  <h2 class="text-black font-extrabold text-sm">Unsure where to start?</h2>
+                  <div class="mt-4">
+                    <a class="text-black py-2 pr-4 block text-sm" href="#">AI Clinic - Our Diagnostic Centre</a>
+                  </div>
+                </div>
+                <div class="mx-6 w-[28%]">
+                  <h2 class="text-black font-extrabold text-sm">INDUSTRY SOLUTIONS</h2>
+                  <div class="mt-4">
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                      href="#">Manufacturing</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Media</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                      href="#">Logistics</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Defence</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                      href="#">Government</a>
+                  </div>
+                </div>
+                <div class="mx-6 w-[28%]">
+                  <h2 class="text-black font-extrabold text-sm">ML WORKFLOWS</h2>
+                  <div class="mt-4">
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Demand
+                      Forecasting</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Inventory
+                      Optimisation</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Load
+                      Planning</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Workplace
+                      Safety</a>
+                    <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm" href="#">Defect
+                      Detection</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">
+              <a href="" class="no-underline">Customers</a> </button>
+            <div class="dropdown-content absolute bg-[#fff] shadow z-1 rounded-2xl w-[1024px] font-normal -left-[350px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[380px]"></div>
+              <div class="relative flex justify-between mb-[50px] text-black px-[48px] pt-[38px]">
+                <h3 class="font-extrabold ">FEATURED CUSTOMERS</h3>
+                <div class="flex items-center justify-center">
+                  <a class="no-underline font-semibold text-black" href="customer.html">Read
+                    more</a>
+                  <i class="fa fa-angle-right ml-2 hover:text-[#9FE870]"></i>
+                </div>
+              </div>
+
+              <div class="flex w-full px-[48px] pb-[38px]">
+                <div class="w-1/3">
+                  <div class="h-32">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="../img/brother logo.png" alt="">
+                    </div>
+                    <p class="text-black">Brother launches virtual assistant with Sentient.io to
+                      boost client and customer engagement</p>
+                  </div>
+                  <div class="h-32 mt-12">
+                    <div class="h-[38px]">
+                      <img class="w-28" src="../img/mci_logo 1.png" alt="">
+                    </div>
+                    <p class="text-black">MCI boosts operational efficiency with Sentient.io’s
+                      Media Asset Management platform</p>
+                  </div>
+
+                </div>
+                <div class="ml-10 w-1/3">
+                  <div class="h-32">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="../img/daido steel logo-01.png" alt="">
+                    </div>
+                    <p class="text-black">Daido Steel partners with Sentient.io to improve false
+                      rejection rates by 10% through an AI Defect Detection System</p>
+                  </div>
+                  <div class="h-32 mt-12">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="../img/mediacorp logo-01.png" alt="">
+                    </div>
+                    <p class="text-black">Mediacorp automate translation of television dramas
+                      with Sentient.io and improve productivity by 1000%</p>
+                  </div>
+                </div>
+                <div class="mx-10 w-1/3">
+                  <div class="h-32">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="../img/IHI_logo.png" alt="">
+                    </div>
+                    <p class="text-black">IHI realise Smart City Vision by monitoring traffic
+                      with Sentient.io</p>
+                  </div>
+                  <div class="h-32 mt-12">
+                    <div class="h-[38px]">
+                      <img class="w-52" src="../img/ttap logo.png" alt="">
+                    </div>
+                    <p class="text-black">Toyota Tsusho partners with Sentient.io to achieve
+                      supply chain efficiency using a virtual assistant</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Partnerships</button>
+            <div
+              class="dropdown-content absolute bg-gradient-to-r from-white via-white via-75% to-[#2F343F] to-75% bg-no-repeat bg-cover shadow z-1 rounded-2xl w-[1100px] font-normal -left-[400px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[438px]"></div>
+              <div class="flex px-[48px] pt-[32px] pb-[20px] w-full">
+                <div class="w-[250px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/build_deploy.html">OUR PARTNERS</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="partnerships_sup_page/technology.html">Technology Partners</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="partnerships_sup_page/data.html">Data Partners</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="partnerships_sup_page/cloud.html">Cloud Partners</a>
+                  </div>
+                </div>
+                <div class="ml-[80px] w-[800px]">
+                  <h2 class="text-black font-extrabold text-base"><a class="no-underline"
+                      href="platform_sub_page/collaborate.html">FEATURED PARTNERS</a></h2>
+                  <div class="flex w-full">
+                    <div class="w-[1/2] pt-[40px]">
+                      <div class="h-[55px]">
+                        <div class="h-[38px]">
+                          <img class="w-24" src="../img/astar ARTC logo 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+                      <div class="h-32 mt-[72px]">
+                        <div class="h-[38px]">
+                          <img class="w-28" src="../img/HDB logo 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+
+                    </div>
+                    <div class="ml-10 w-[1/2] pt-[40px]">
+                      <div class="h-[55px]">
+                        <div class="h-[38px]">
+                          <img class="w-24" src="../img/staple 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+                      <div class="h-32 mt-[72px]">
+                        <div class="h-[38px]">
+                          <img class="w-24" src="../img/microsoft logo 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pl-[100px] w-[430px]">
+                  <div class="">
+                    <h2 class="text-white text-xl font-bold"><a class="no-underline"
+                        href="platform_sub_page/ml_workflows.html">Sentient.io Partners</a></h2>
+                    <div class="mt-4 text-white leading-6 font-light">
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Join a global community of partners and unlock unprecedented opportunities together</a>
+                    </div>
+                    <div class="text-white mt-[90px] flex items-center">
+                      <a class="block no-underline hover:text-[#9FE870]" href="become.html">Become a Partner</a>
+                    </div>
+                    <div class="text-white mt-[12px] flex items-center">
+                      <a class="block no-underline hover:text-[#9FE870]" href="technology.html">Find a Partner</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Company</button>
+            <div class="dropdown-content absolute bg-[#fff] shadow z-1 rounded-2xl w-[206px] font-normal -left-[60px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[88px]"></div>
+              <div class="flex w-full p-[48px] pt-[35px]">
+                <div class="w-[110px]">
+                  <h2 class="text-black font-extrabold">COMPANY</h2>
+                  <div class="mt-6 leading-9">
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">About
+                      Us</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Our
+                      Team</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Press
+                      Releases</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Investors</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Careers</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Contact
+                      Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Resources</button>
+            <div class="dropdown-content absolute bg-[#fff] shadow z-1 rounded-2xl w-[250px] font-normal -left-[60px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[91px]"></div>
+              <div class="flex p-[48px] pt-[35px] w-full">
+                <div class="">
+                  <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870]" href="#">Quick Start
+                    Guide</a>
+                  <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870]" href="#">Documentation</a>
+                  <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870]" href="#">Blog</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <div id="dropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Japanese</a>
+              </li>
+            </ul>
+          </div> -->
+      <!-- <a
+            href="#"
+            class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+            >Get Started</a
+          > -->
+    </div>
+    <div class="flex lg:w-[40%] md:w-[50%] justify-end items-center">
+      <nav class="w-auto flex gap-6 mx-4 items-center">
+        <div class="hidden md:flex justify-end items-center gap-6">
+          <!-- Dropdown menu for language-->
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button class="text-[#BEC7D0] hover:text-white flex font-normal hover:transition hover:duration-300">ENG<svg
+                class="hover:rotate-180 w-4 h-4 mt-1 ml-1 text-white" aria-hidden="true" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg></button>
+            <div class="dropdown-content absolute bg-[#262A36] shadow z-1 rounded-lg w-18 mt-0 font-normal">
+              <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">ENG</a>
+              <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">JPN</a>
+              <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">IND</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Button -->
+      <a class="hidden md:flex mx-4 text-[#BEC7D0] hover:text-white hover:text-[#9FE870] font-normal" href="#">Login</a>
+      <button
+        class="hidden md:flex bg-[#9FE870] text-black-900 font-bold px-6 py-3 rounded-4xl w-[171px] mx-3 hover:bg-white hover:text-black hover:transition hover:duration-300">Request
+        a
+        Demo</button>
+    </div>
+    <!-- Hamburger Icon -->
+    <button id="menu-btn" class="z-[200] block hamburger xl:hidden focus:outline-none mt-2 mx-5">
+      <span class="hamburger-top bg-white"></span>
+      <span class="hamburger-middle bg-white"></span>
+      <span class="hamburger-bottom bg-white"></span>
+    </button>
+
+
+    <!-- Mobile Menu -->
+    <nav id="menu"
+      class="hidden z-[150] bg-[#121212] h-screen w-full top-0 left-0 right-0 absolute flex-col font-bold drop-shadow-md pt-24 text-[#BEC7D0] font-normal text-3xl">
+      <div tabindex="0" href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+        <a class="block cursor-pointer" style="text-underline-offset: 8px;">Products</a>
+        <i class="cursor-pointer fa fa-angle-right"></i>
+      </div>
+      <div tabindex="0" href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+        <a class="block cursor-pointer" style="text-underline-offset: 8px;">Customers</a>
+        <i class="cursor-pointer fa fa-angle-right"></i>
+      </div>
+      <div tabindex="0" href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+        <a class="block cursor-pointer" style="text-underline-offset: 8px;">Solutions</a>
+        <i class="cursor-pointer fa fa-angle-right"></i>
+      </div>
+      <div tabindex="0" href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+        <a class="block cursor-pointer" style="text-underline-offset: 8px;">Partnerships</a>
+        <i class="cursor-pointer fa fa-angle-right"></i>
+      </div>
+      <div tabindex="0" href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+        <a class="block cursor-pointer" style="text-underline-offset: 8px;">Company</a>
+        <i class="cursor-pointer fa fa-angle-right"></i>
+      </div>
+      <div tabindex="0" href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+        <a class="block cursor-pointer" style="text-underline-offset: 8px;">Resources</a>
+        <i class="cursor-pointer fa fa-angle-right"></i>
+      </div>
+      <a href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 block md:hidden cursor-pointer transition duration-300  focus:outline-none focus:bg-[#262A36] transition duration-300"
+        style="text-underline-offset: 8px;">Login</a>
+      <a href="#"
+        class="px-[2.5rem] md:px-[2.1rem] py-5 block md:hidden cursor-pointer transition duration-300  focus:outline-none focus:bg-[#262A36] transition duration-300"
+        style="text-underline-offset: 8px;">Request a Demo</a>
+      <!-- <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex" type="button"><img
+            class="w-5 text-white" src="../img/en.png" alt=""><svg class="w-4 h-4 mt-0 ml-1 text-white"
+            aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg></div> -->
+      <!-- Dropdown menu -->
+      <!-- <div id="dropdown"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28 dark:bg-gray-700">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a href="#"
+                class="block text-white px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block text-white px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Japanese</a>
+            </li>
+          </ul>
+        </div> -->
+      <!-- <a class="gap-8 text-white" href="#">Login</a> -->
+      <!-- <button class="bg-[#9FE870] text-black-900 font-bold mx-5 px-5 py-2 rounded-3xl">Book Call</button> -->
+    </nav>
+  </header>
+    <main>
+        <section>
+            <!-- Meet our Customer section -->
+            <div class="px-5 py-32 mx-auto flex flex-col ready-to-enter">
+                <div class="lg:w-[80%] mx-auto">
+        
+                  <div class="flex flex-col justify-center md:flex-row  mt-0 w-full md:px-8 pb-12">
+        
+                    <div class="w-full md:w-[90%] md:w-2/3  mt-4 pt-4 md:mt-0 text-center md:text-left">
+                        <img class="w-12 mx-auto mb-8" src="../img/Vector (4).png" alt="">
+                      <h1 class="md:text-center text-left leading-tight text-white text-5xl font-bold mb-4">Find a Partner
+                      </h1>
+                      <p class="md:text-center text-left text-white text-2xl leading-snug lg:mx-16 mx-1 font-light">Work with experts specialised in solving your business problems.</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-center">
+                    <button
+                      class="bg-[#9FE870] w-[250px] h-[59px] text-xl text-black-900 font-bold md:mb-0 mb-6 md:mx-3 px-[28px] py-[16px] cursor-pointer  rounded-[32px] hover:transition hover:duration-300 hover:bg-white hover:text-black font-extrabold"><a class="no-underline" href="become.html"> Become a Partner</a></button>
+                  </div>
+        
+        
+                </div>
+              </div>
+              <div class="pt-[101px] pb-[101px]">
+                <div class="">
+                  <!-- Tabs -->
+                  <ul id="tabs" class="w-full inline-flex pt-2 px-1 w-full justify-center mx-auto">
+                    <li class="px-4 lg:mx-5 mx-2 text-[#121212] text-base font-normal py-2 rounded-4xl hover:bg-black hover:text-white"><a id="default-tab" href="#first1">All</a></li>
+                    <li class="px-4 lg:mx-5 mx-2 text-[#121212] text-base font-normal py-2 rounded-4xl hover:bg-black hover:text-white"><a href="#second1">Technology Partners</a></li>
+                    <li class="px-4 lg:mx-5 mx-2 text-[#121212] text-base font-normal py-2 rounded-4xl hover:bg-black hover:text-white"><a href="#third1">Data Partners</a></li>
+                    <li class="px-4 lg:mx-5 mx-2 text-[#121212] text-base font-normal py-2 rounded-4xl hover:bg-black hover:text-white"><a href="#forth1">Cloud Partners</a></li>
+                  </ul>
+                   <!-- Tab Contents -->
+                    <div id="tab-contents">
+                        <div id="first1" class="p-4 mt-5">
+                            <div class="xl:px-[4.5rem] px-[2rem] mx-auto flex justify-around pt-[101px] pb-[50px]">
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[200px] h-[60px]"  src="../img/astar ARTC logo 1.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[200px] h-[60px]" src="../img/dnb sinagpore.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[200px] h-[60px]" src="../img/google-cloud-logo-01 1.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[200px] h-[80px]" src="../img/hpe_pri_grn_pos_rgb 1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="xl:px-[4.5rem] px-[2rem] mx-auto flex justify-around pt-[50px] pb-[101px]">
+                                <div class="mx-16 flex justify-center">
+                                    <img class=" w-[250px] h-[60px]"  src="../img/HDB logo 1.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[250px] h-[80px]" src="../img/huawei logo 1.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[250px] h-[80px]" src="../img/microsoft logo 1.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[250px] h-[80px]" src="../img/staple 1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="second1" class="hidden p-4 mt-5">
+                            <div class="xl:px-[4.5rem] px-[2rem] mx-auto flex justify-around pt-[101px] pb-[50px]">
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[200px] h-[60px]"  src="../img/astar ARTC logo 1.png" alt="">
+                                </div>
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[200px] h-[80px]" src="../img/hpe_pri_grn_pos_rgb 1.png" alt="">
+                                </div>
+                            
+                                <div class="mx-16 flex justify-center">
+                                    <img class="w-[250px] h-[80px]" src="../img/staple 1.png" alt="">
+                                </div>
+                          
+                        </div>
+                    </div>
+                    <div id="third1" class="hidden p-4 mt-5">
+                        <div class="xl:px-[4.5rem] px-[2rem] mx-auto flex justify-center pt-[101px] pb-[50px]">
+                            <div class="mx-16 flex justify-center">
+                                <img class="w-[200px] h-[60px]"  src="../img/dnb sinagpore.png" alt="">
+                            </div>
+                            <div class="mx-16 flex justify-center">
+                                <img class="w-[200px] h-[80px]" src="../img/HDB logo 1.png" alt="">
+                            </div>
+                    </div>
+                </div>
+                <div id="forth1" class="hidden p-4 mt-5">
+                    <div class="xl:px-[4.5rem] px-[2rem] mx-auto flex justify-around pt-[101px] pb-[50px]">
+                        <div class="mx-16 flex justify-center">
+                            <img class="w-[200px] h-[60px]"  src="../img/google-cloud-logo-01 1.png" alt="">
+                        </div>
+                        <div class="mx-16 flex justify-center">
+                            <img class="w-[200px] h-[80px]" src="../img/huawei logo 1.png" alt="">
+                        </div>
+                    
+                        <div class="mx-16 flex justify-center">
+                            <img class="w-[250px] h-[80px]" src="../img/microsoft logo 1.png" alt="">
+                        </div>
+                  
+                </div>
+            </div>
+                </div>
+          
+        </section>
+    </main>
+    <!-------------------------------------- Footer section -------------------------------------->
+    <footer class="bg-[#F3F3F3] flex-col lg:pb-[50px] lg:pt-[112px] xl:px-[70px] px-[1.5rem] pb-[3.3rem] pt-[5.875rem]">
+        <!-------------------------------------- Top of Footer -------------------------------------->
+        <div class="flex flex-col lg:flex-row justify-between">
+            <!-------------------------------------- Left Top of Footer -------------------------------------->
+            <div>
+                <div class="mb-[1.1rem]">
+                    <img class="w-[200px]" src="../img/logo1.png" alt="">
+                </div>
+                <div class="mb-[1.1rem] flex pl-6 md:pl-4 my-[0.5rem]">
+                    <div><img class="w-4 mr-4" src="../img/location icon.png" alt=""></div>
+                    <div class="text-[#525252] text-xl md:text-base">
+                        <p class="mb-[0.7rem]">3 Fusionopolis Place,</p>
+                        <p class="mb-[0.7rem]">#03-56 Galaxis Work Lofts</p>
+                        <p>Singapore 138523</p>
+                    </div>
+                </div>
+                <div class="w-full flex text-center pl-6 md:pl-4">
+                    <div>
+                        <img class="w-4 mr-4 mt-2" src="../img/mail icon.png" alt="">
+                    </div>
+                    <p class="text-[#525252] text-xl md:text-base">enquiry@sentient.io</p>
+                </div>
+            </div>
+            <!-------------------------------------- Right Top of Footer -------------------------------------->
+            <div class="flex flex-col lg:flex-row pl-6 md:pl-4 lg:pl-0 pt-[3.6rem] lg:pt-0">
+                <div class="lg:mr-[5rem]">
+                    <div class="pb-3 lg:pb-2 flex items-center justify-between lg:justify-start">
+                        <p><a class="text-[#121212] font-bold text-xl md:text-base">PLATFORM</a></p>
+                        <button id="footer-platform-btn" class="foot block lg:hidden">
+                            <span class="arrow"></span>
+                        </button>
+                    </div>
+                    <div id="footer-platform"
+                        class="hidden-footer lg:opacity-100 lg:block text-[#525252] text-xl md:text-base">
+                        <p class="py-1.5"><a href="#">Build & Deploy</a></p>
+                        <p class="py-1.5"><a href="#">Collaborate</a></p>
+                        <p class="pt-1.5 pb-4 lg:py-1.5"><a href="#">ML Workflows</a></p>
+                    </div>
+                </div>
+                <div class="lg:mr-[5rem]">
+                    <div class="pb-3 pt-6 lg:pt-0 lg:pb-2 flex items-center justify-between lg:justify-start">
+                        <p><a class="text-[#121212] font-bold text-xl md:text-base">COMPANY</a></p>
+                        <button id="footer-company-btn" class="foot block lg:hidden">
+                            <span class="arrow"></span>
+                        </button>
+                    </div>
+                    <div id="footer-company"
+                        class="hidden-footer lg:opacity-100 lg:block text-[#525252] text-xl md:text-base">
+                        <p class="py-1.5"><a href="#">About Us</a></p>
+                        <p class="py-1.5"><a href="#">Our Team</a></p>
+                        <p class="py-1.5"><a href="#">Press Releases</a></p>
+                        <p class="py-1.5"><a href="#">Investors</a></p>
+                        <p class="py-1.5"><a href="#">Careers</a></p>
+                        <p class="py-1.5"><a href="#">Contact Us</a></p>
+
+                    </div>
+                </div>
+                <div class="">
+                    <div class="pb-3 pt-6 lg:pt-0 lg:pb-2 flex items-center justify-between lg:justify-start">
+                        <p><a class="text-[#121212] font-bold text-xl md:text-base">RESOURCE</a></p>
+                        <button id="footer-resources-btn" class="foot block lg:hidden">
+                            <span class="arrow"></span>
+                        </button>
+                    </div>
+                    <div id="footer-resources"
+                        class="hidden-footer lg:opacity-100 lg:block text-[#525252] text-xl md:text-base">
+                        <p class="py-1.5"><a href="#">Quick Start Guide</a></p>
+                        <p class="py-1.5"><a href="#">Documentation</a></p>
+                        <p class="py-1.5"><a href="#">Blog</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------- Bottom of Footer -------------------------------------->
+        <div class="flex justify-between mt-[8.25rem]">
+            <div class="pl-6 md:pl-4">
+                <p class="text-[#525252] text-xl md:text-[15px]">Copyright © 2023 Sentient.io</p>
+            </div>
+            <div class="flex justify-center items-center text-xl md:text-[15px]">
+                <p class="text-[#525252] mr-6">Privacy Policy</p>
+                <img class="w-6 mr-6" src="../img/Vector (2).png" alt="">
+                <img class="w-6 mr-6" src="../img/Group 67.png" alt="">
+                <img class="w-6 mr-6" src="../img/Group 68.png" alt="">
+                <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-[10px] mx-2 text-sm fa fa-brands fa-facebook-f"></i> -->
+                <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-2 mx-2 text-sm fa fa-brands fa-youtube"></i> -->
+                <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-2 mx-2 text-sm fa fa-brands fa-linkedin-in"></i> -->
+            </div>
+        </div>
+    </footer>
+    <script>
+        let tabsContainer = document.querySelector("#tabs");
+
+        let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
+
+        console.log(tabTogglers);
+
+        tabTogglers.forEach(function(toggler) {
+        toggler.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            let tabName = this.getAttribute("href");
+
+            let tabContents = document.querySelector("#tab-contents");
+
+            for (let i = 0; i < tabContents.children.length; i++) {
+            
+            tabTogglers[i].parentElement.classList.remove("bg-black", "text-white");  tabContents.children[i].classList.remove("hidden");
+            if ("#" + tabContents.children[i].id === tabName) {
+                continue;
+            }
+            tabContents.children[i].classList.add("hidden");
+            
+            }
+            e.target.parentElement.classList.add("bg-black", "text-white");
+        });
+        });
+        // ----------------------------------------- Mobile view header script -------------------------------------
+        const btn = document.getElementById('menu-btn')
+        const nav = document.getElementById('menu')
+
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('open')
+            nav.classList.toggle('hidden')
+        })
+
+        // ----------------------------- Success stories next and prev slide script ----------------------------------
+        const slidesContainer = document.querySelector(".slides-container");
+        const slideWidth = slidesContainer.querySelector(".slide").clientWidth;
+        const prevButton = document.querySelector(".prev");
+        const nextButton = document.querySelector(".next");
+
+        nextButton.addEventListener("click", () => {
+            slidesContainer.scrollLeft += slideWidth;
+        });
+
+        prevButton.addEventListener("click", () => {
+            slidesContainer.scrollLeft -= slideWidth;
+        });
+
+        slidesContainer.addEventListener("scroll", () => {
+            if (slidesContainer.scrollLeft === 0) {
+                prevButton.classList.add("bg-gray-200");
+            } else {
+                prevButton.classList.remove("bg-gray-200");
+                prevButton.classList.add("bg-black");
+            }
+
+            if (slidesContainer.scrollLeft + slidesContainer.offsetWidth >= slidesContainer.scrollWidth) {
+                nextButton.classList.add("bg-gray-200");
+            } else {
+                nextButton.classList.remove("bg-gray-200");
+            }
+        });
+
+        // ----------------------------- Hear from Our Customers next and prev slide script ----------------------------------
+        const slidesContainer1 = document.querySelector(".slides-container1");
+        const slideWidth1 = slidesContainer1.querySelector(".slide1").clientWidth;
+        const prevButton1 = document.querySelector(".prev1");
+        const nextButton1 = document.querySelector(".next1");
+
+        nextButton1.addEventListener("click", () => {
+            slidesContainer1.scrollLeft += slideWidth1;
+        });
+
+        prevButton1.addEventListener("click", () => {
+            slidesContainer1.scrollLeft -= slideWidth1;
+        });
+
+        slidesContainer1.addEventListener("scroll", () => {
+            if (slidesContainer1.scrollLeft === 0) {
+                prevButton1.classList.add("bg-gray-200");
+            } else {
+                prevButton1.classList.remove("bg-gray-200");
+                prevButton1.classList.add("bg-black");
+            }
+
+            if (slidesContainer1.scrollLeft + slidesContainer1.offsetWidth >= slidesContainer1.scrollWidth) {
+                nextButton1.classList.add("bg-gray-200");
+            } else {
+                nextButton1.classList.remove("bg-gray-200");
+            }
+        });
+
+       
+        // ----------------------------------------- iPad and Mobile Footer script -------------------------------------
+        const footerP = document.getElementById('footer-platform-btn')
+        const infoP = document.getElementById('footer-platform')
+
+        footerP.addEventListener('click', () => {
+            footerP.classList.toggle('open')
+            if (infoP.classList.contains('hidden-footer')) {
+                infoP.classList.remove('hidden-footer')
+                infoP.classList.add('visible-footer')
+            } else {
+                infoP.classList.remove('visible-footer')
+                infoP.classList.add('hidden-footer')
+            }
+        })
+
+        const footerC = document.getElementById('footer-company-btn')
+        const infoC = document.getElementById('footer-company')
+
+        footerC.addEventListener('click', () => {
+            footerC.classList.toggle('open')
+            if (infoC.classList.contains('hidden-footer')) {
+                infoC.classList.remove('hidden-footer')
+                infoC.classList.add('visible-footer')
+            } else {
+                infoC.classList.remove('visible-footer')
+                infoC.classList.add('hidden-footer')
+            }
+        })
+
+        const footerR = document.getElementById('footer-resources-btn')
+        const infoR = document.getElementById('footer-resources')
+
+        footerR.addEventListener('click', () => {
+            footerR.classList.toggle('open')
+            if (infoR.classList.contains('hidden-footer')) {
+                infoR.classList.remove('hidden-footer')
+                infoR.classList.add('visible-footer')
+            } else {
+                infoR.classList.remove('visible-footer')
+                infoR.classList.add('hidden-footer')
+            }
+        })
+
+    </script>
+       
+      <script src="js/demoAppScripts.js"></script>
+ 
+    <script>
+     
+    </script>
+
+  
+</body>
+
+</html>

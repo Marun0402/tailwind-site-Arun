@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentient</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: "Nunito Sans";
+    }
+  </style>
+  <script src="https://unpkg.com/wavesurfer.js@6.6"></script>
+</head>
+
+<body>
+  <header
+    class="bg-[#00050A] sticky top-0 z-[100] h-header items-center flex justify-between xl:px-[4.5rem] px-[0.5rem] md:px-[1.2rem]">
+    <div class="flex group lg:w-[60%] md:w-[50%] items-center">
+      <!-- Logo -->
+      <div class="flex justify-center items-center">
+        <!-- <img class="h-6" src="img/Sentient logo white-01.png" alt="Logo" /> -->
+        <a href="../index.html">
+          <img class="w-[176px] h-[49.7px]" src="/img/Sentient logo white-01.png" alt="Logo" />
+        </a>      </div>
+
+      <!-- Menu Items -->
+      <nav class="md:w-[40%] w-auto hidden space-x-6 xl:flex menu-item-header ml-10 font-medium text-header-gray">
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Platform</button>
+            <div
+              class="dropdown-content absolute bg-gradient-to-r from-white via-white via-70% to-[#2F343F] to-70% bg-no-repeat bg-cover shadow-2xl z-1 rounded-2xl w-[1045px] font-normal -left-[280px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[305px]"></div>
+              <div class="flex px-[48px] pt-[32px] pb-[44px] w-full">
+                <div class="w-[166px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/build_deploy.html">BUILD & DEPLOY</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Data
+                      Modeling</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Model
+                      Optimisation</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Integrate &
+                      Chain APIs</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Measure
+                      ROI</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Cost
+                      Reduction</a>
+                  </div>
+                </div>
+                <div class="ml-[95px] mr-[47.5px] w-[119px]">
+                  <h2 class="text-black font-extrabold text-base"><a class="no-underline"
+                      href="platform_sub_page/collaborate.html">COLLABORATE</a></h2>
+                  <div class="mt-4 text-black hover:text-[#9FE870] leading-9">
+                    <a class="block no-underline" href="#">TeamSpaces</a>
+                  </div>
+                </div>
+                <div class="ml-[47.5px] w-[169px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/ml_workflows.html">ML WORKFLOWS</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Multi-cloud
+                      Workflows</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Edge
+                      Computing</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Secure
+                      Deployments</a>
+                    <a class="block no-underline" href="#">Analytics</a>
+                  </div>
+                </div>
+                <div class="pl-[68px]">
+                  <div class="">
+                    <h2 class="text-white text-xl font-bold"><a class="no-underline"
+                        href="platform_sub_page/ml_workflows.html">Our Microservices</a></h2>
+                    <div class="mt-1 text-white leading-9 font-light">
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Object Detection</a>
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Automatic Speech Recognition</a>
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Text-to-Speech</a>
+                    </div>
+                    <div class="text-white mt-[60px] flex items-center">
+                      <a>View More</a>
+                      <i class="fa fa-angle-right ml-2 md:text-base hover:text-[#9FE870]"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Solutions</button>
+            <div
+              class="dropdown-content absolute bg-gradient-to-r from-white via-white via-65% to-[#2F343F] to-65% bg-no-repeat bg-cover shadow-2xl z-1 rounded-2xl w-[843px] font-normal -left-[280px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[305px]"></div>
+              <div class="flex pl-[48px] pt-[32px] pb-[44px] w-full">
+                <div class="w-[200px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/build_deploy.html">INDUSTRY SOLUTIONS</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]"
+                      href="solution_sub_page/manufacturing.html">Manufacturing</a>
+                    <a class="block no-underline hover:text-[#9FE870]"
+                      href="solution_sub_page/solution_media.html">Media</a>
+                    <a class="block no-underline hover:text-[#9FE870]"
+                      href="solution_sub_page/logistics.html">Logistics</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="solution_sub_page/defence.html">Defence</a>
+                    <a class="block no-underline hover:text-[#9FE870]"
+                      href="solution_sub_page/government.html">Government</a>
+                  </div>
+                </div>
+                <div class="ml-[95px] w-[200px]">
+                  <h2 class="text-black font-extrabold text-base"><a class="no-underline"
+                      href="platform_sub_page/collaborate.html">BY USE CASE</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Demand Forecasting</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Inventory Optimisation</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Load Planning</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Workplace Safety</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="#">Defect Detection</a>
+                  </div>
+                </div>
+                <div class="pl-[32px] w-[300px]">
+                  <div class="">
+                    <h2 class="text-white text-xl font-bold"><a class="no-underline"
+                        href="platform_sub_page/ml_workflows.html">Unsure where to start?</a></h2>
+                    <div class="mt-1 text-white leading-9 font-light">
+                      <a class="block underline hover:text-[#9FE870]" href="#">AI Clinic - Our Diagnostic Centre</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">
+              <a href="" class="no-underline">Customers</a> </button>
+            <div
+              class="dropdown-content absolute bg-[#fff] shadow-2xl z-1 rounded-2xl w-[1024px] font-normal -left-[350px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[380px]"></div>
+              <div class="relative flex justify-between mb-[50px] text-black px-[48px] pt-[38px]">
+                <h3 class="font-extrabold ">FEATURED CUSTOMERS</h3>
+                <div class="flex items-center justify-center">
+                  <a class="no-underline font-semibold text-black" href="customer.html">Read
+                    more</a>
+                  <i class="fa fa-angle-right ml-2 hover:text-[#9FE870]"></i>
+                </div>
+              </div>
+
+              <div class="flex w-full px-[48px] pb-[38px]">
+                <div class="w-1/3">
+                  <div class="h-32">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="img/brother logo.png" alt="">
+                    </div>
+                    <p class="text-black">Brother launches virtual assistant with Sentient.io to
+                      boost client and customer engagement</p>
+                  </div>
+                  <div class="h-32 mt-12">
+                    <div class="h-[38px]">
+                      <img class="w-28" src="img/mci_logo 1.png" alt="">
+                    </div>
+                    <p class="text-black">MCI boosts operational efficiency with Sentient.io’s
+                      Media Asset Management platform</p>
+                  </div>
+
+                </div>
+                <div class="ml-10 w-1/3">
+                  <div class="h-32">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="img/daido steel logo-01.png" alt="">
+                    </div>
+                    <p class="text-black">Daido Steel partners with Sentient.io to improve false
+                      rejection rates by 10% through an AI Defect Detection System</p>
+                  </div>
+                  <div class="h-32 mt-12">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="img/mediacorp logo-01.png" alt="">
+                    </div>
+                    <p class="text-black">Mediacorp automate translation of television dramas
+                      with Sentient.io and improve productivity by 1000%</p>
+                  </div>
+                </div>
+                <div class="mx-10 w-1/3">
+                  <div class="h-32">
+                    <div class="h-[38px]">
+                      <img class="w-24" src="img/IHI_logo.png" alt="">
+                    </div>
+                    <p class="text-black">IHI realise Smart City Vision by monitoring traffic
+                      with Sentient.io</p>
+                  </div>
+                  <div class="h-32 mt-12">
+                    <div class="h-[38px]">
+                      <img class="w-52" src="img/ttap logo.png" alt="">
+                    </div>
+                    <p class="text-black">Toyota Tsusho partners with Sentient.io to achieve
+                      supply chain efficiency using a virtual assistant</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Partnerships</button>
+            <div
+              class="dropdown-content absolute bg-gradient-to-r from-white via-white via-75% to-[#2F343F] to-75% bg-no-repeat bg-cover shadow-2xl z-1 rounded-2xl w-[1100px] font-normal -left-[400px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[438px]"></div>
+              <div class="flex px-[48px] pt-[32px] pb-[20px] w-full">
+                <div class="w-[250px]">
+                  <h2 class="text-black font-extrabold"><a class="no-underline"
+                      href="platform_sub_page/build_deploy.html">OUR PARTNERS</a></h2>
+                  <div class="mt-4 text-black leading-9">
+                    <a class="block no-underline hover:text-[#9FE870]" href="l">Technology Partners</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="">Data Partners</a>
+                    <a class="block no-underline hover:text-[#9FE870]" href="">Cloud Partners</a>
+                  </div>
+                </div>
+                <div class="ml-[80px] w-[800px]">
+                  <h2 class="text-black font-extrabold text-base"><a class="no-underline"
+                      href="platform_sub_page/collaborate.html">FEATURED PARTNERS</a></h2>
+                  <div class="flex w-full">
+                    <div class="w-[1/2] pt-[40px]">
+                      <div class="h-[55px]">
+                        <div class="h-[38px]">
+                          <img class="w-24" src="img/astar ARTC logo 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+                      <div class="h-32 mt-[72px]">
+                        <div class="h-[38px]">
+                          <img class="w-28" src="img/HDB logo 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+
+                    </div>
+                    <div class="ml-10 w-[1/2] pt-[40px]">
+                      <div class="h-[55px]">
+                        <div class="h-[38px]">
+                          <img class="w-24" src="img/staple 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+                      <div class="h-32 mt-[72px]">
+                        <div class="h-[38px]">
+                          <img class="w-24" src="img/microsoft logo 1.png" alt="">
+                        </div>
+                        <p class="text-black">Rorem ipsum dolor sit amet</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pl-[100px] w-[430px]">
+                  <div class="">
+                    <h2 class="text-white text-xl font-bold"><a class="no-underline"
+                        href="platform_sub_page/ml_workflows.html">Sentient.io Partners</a></h2>
+                    <div class="mt-4 text-white leading-6 font-light">
+                      <a class="block no-underline hover:text-[#9FE870]" href="#">Join a global community of partners
+                        and unlock unprecedented opportunities together</a>
+                    </div>
+                    <div class="text-white mt-[90px] flex items-center">
+                      <a class="block no-underline hover:text-[#9FE870]" href="partnerships_sup_page/become.html">Become
+                        a Partner</a>
+                    </div>
+                    <div class="text-white mt-[12px] flex items-center">
+                      <a class="block no-underline hover:text-[#9FE870]"
+                        href="partnerships_sup_page/technology.html">Find a Partner</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Company</button>
+            <div
+              class="dropdown-content absolute bg-[#fff] shadow-2xl z-1 rounded-2xl w-[206px] font-normal -left-[60px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[88px]"></div>
+              <div class="flex w-full p-[48px] pt-[35px]">
+                <div class="w-[110px]">
+                  <div class="leading-9">
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="company_sub_page/aboutUs.html">About
+                      Us</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="company_sub_page/our_team.html">Our
+                      Team</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Press
+                      Releases</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="company_sub_page/investors.html">Investors</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="#">Careers</a>
+                    <a class="text-black block no-underline hover:text-[#9FE870]" href="company_sub_page/contactUs.html">Contact
+                      Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button
+              class="text-[#BEC7D0] hover:text-white cursor-pointer hover:transition hover:duration-300 my-6">Resources</button>
+            <div class="dropdown-content absolute bg-[#fff] shadow z-1 rounded-2xl w-[250px] font-normal -left-[60px]">
+              <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[91px]"></div>
+              <div class="flex p-[48px] pt-[35px] w-full">
+                <div class="">
+                  <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870]" href="resource_sub_page/quick_start.html">Quick Start
+                    Guide</a>
+                  <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870]" href="#">Documentation</a>
+                  <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870]" href="#">Blog</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="flex lg:w-[40%] md:w-[50%] justify-end items-center">
+      <nav class="w-auto flex gap-6 mx-4 items-center">
+        <div class="hidden md:flex justify-end items-center gap-6">
+          <!-- Dropdown menu for language-->
+          <div class="dropdown relative inline-block cursor-pointer">
+            <button class="text-white flex font-normal hover:transition hover:duration-300">ENG<svg
+                class="hover:rotate-180 w-4 h-4 mt-1 ml-1 text-white" aria-hidden="true" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg></button>
+            <div class="dropdown-content absolute bg-[#262A36] shadow z-1 rounded-lg w-18 mt-0 font-normal">
+              <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">ENG</a>
+              <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">JPN</a>
+              <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">IND</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Button -->
+      <a class="hidden md:flex mx-4 text-white hover:text-[#9FE870] font-normal" href="#">Login</a>
+      <button
+        class="hidden md:flex bg-[#9FE870] text-black-900 font-bold px-6 py-3 rounded-4xl w-[171px] mx-3 hover:bg-white hover:text-black hover:transition hover:duration-300">Request
+        a
+        Demo</button>
+    </div>
+    <!-- Hamburger Icon -->
+    <button id="menu-btn" class="z-[200] block hamburger xl:hidden focus:outline-none mt-2 mx-1">
+      <span id="hamburger_span" class="hamburger-top bg-white"></span>
+      <span class="hamburger-middle bg-white"></span>
+      <span id="hamburger_span_bottom" class="hamburger-bottom bg-white"></span>
+    </button>
+
+
+    <!-- Mobile Menu -->
+    <nav id="menu"
+      class="hidden z-[150] bg-[#ECF0F2] h-screen w-full top-0 left-0 right-0 absolute flex-col font-bold drop-shadow-md pt-24 text-black font-normal">
+      <div class="cursor-pointer">
+        <div class="px-[1.2rem] md:px-[1.8rem] flex items-center justify-between">
+          <a class="block cursor-pointer text-[20px] font-medium" style="text-underline-offset: 8px;">Products</a>
+          <button id="productButton" class="nav">
+            <span class="navarrow"></span>
+          </button>
+        </div>
+        <div id="productInfo" class="hidden-nav bg-white px-[1.2rem] md:px-[1.8rem] mb-[12px] mt-3">
+          <div class="py-[36px]">
+            <div>
+              <p class="text-base text-black font-bold"><a class="no-underline" href="platform_sub_page/build_deploy.html"> BUILD & DEPLOY</a></p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="#">Data Modeling</a></p>
+                <p class="mb-[15px]"><a href="#">Model Optimisation</a></p>
+                <p class="mb-[15px]"><a href="#">Integrate & Chain APIs</a></p>
+                <p class="mb-[15px]"><a href="#">Measure ROI</a></p>
+                <p class="mb-[15px]"><a href="#">Cost Reduction</a></p>
+              </div>
+            </div>
+            <div class="pt-[20px]">
+              <p class="text-base text-black font-bold"><a  class="no-underline"  href="platform_sub_page/collaborate.html"> COLLABORATE</a></p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="#">TeamSpaces</a></p>
+              </div>
+            </div>
+            <div class="pt-[20px]">
+              <p class="text-base text-black font-bold">ML WORKFLOWS</p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="#">Multi-cloud Workflows</a></p>
+                <p class="mb-[15px]"><a href="#">Edge Computing</a></p>
+                <p class="mb-[15px]"><a href="#">Secure Deployments</a></p>
+                <p class="mb-[15px]"><a href="#">Analytics</a></p>
+              </div>
+            </div>
+            <div class="border-b-2 border-[#ECF0F2]"></div>
+            <div class="pt-[30px]">
+              <p class="text-base text-black font-bold"><a class="no-underline" href="platform_sub_page/ml_workflows.html"> Our Microservices</a></p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="#">Object Detection</a></p>
+                <p class="mb-[15px]"><a href="#">Automatic Speech Recognition</a></p>
+                <p class="mb-[15px]"><a href="#">Text-to-Speech</a></p>
+              </div>
+            </div>
+            <div class="text-black mt-[50px] flex items-center text-[14px]">
+              <a>View More</a>
+              <i class="fa fa-angle-right ml-3 hover:text-[#9FE870]"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cursor-pointer">
+        <div class="px-[1.2rem] md:px-[1.8rem] flex items-center justify-between">
+          <a class="block cursor-pointer text-[20px] font-medium" style="text-underline-offset: 8px;">Solutions</a>
+          <button id="solutionsButton" class="nav">
+            <span class="navarrow"></span>
+          </button>
+        </div>
+        <div id="solutionsInfo" class="hidden-nav bg-white px-[1.2rem] md:px-[1.8rem] mb-[12px] mt-3">
+          <div class="py-[36px]">
+            <div>
+              <p class="text-base text-black font-bold">INDUSTRY SOLUTIONS</p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="solution_sub_page/manufacturing.html">Manufacturing</a></p>
+                <p class="mb-[15px]"><a href="solution_sub_page/solution_media.html">Media</a></p>
+                <p class="mb-[15px]"><a href="solution_sub_page/logistics.html">Logistics</a></p>
+                <p class="mb-[15px]"><a href="solution_sub_page/defence.html">Defence</a></p>
+                <p class="mb-[15px]"><a href="solution_sub_page/government.html">Government</a></p>
+              </div>
+            </div>
+            <div class="pt-[20px]">
+              <p class="text-base text-black font-bold">BY USE CASE</p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="#">Demand Forecasting</a></p>
+                <p class="mb-[15px]"><a href="#">Inventory Optimisation</a></p>
+                <p class="mb-[15px]"><a href="#">Load Planning</a></p>
+                <p class="mb-[15px]"><a href="#">Workplace Safety</a></p>
+                <p class="mb-[15px]"><a href="#">Defect Detection</a></p>
+              </div>
+            </div>
+            <div class="border-b-2 border-[#ECF0F2]"></div>
+            <div class="pt-[30px]">
+              <p class="text-base text-black font-bold">Unsure where to start?</p>
+              <div class="mt-[24px] text-[14px]">
+                <p class=""><a href="#">AI Clinic - Our Diagnostic Centre</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cursor-pointer">
+        <div class="px-[1.2rem] md:px-[1.8rem] flex items-center justify-between">
+          <a class="block cursor-pointer text-[20px] font-medium" style="text-underline-offset: 8px;">Customers</a>
+          <button id="customersButton" class="nav">
+            <span class="navarrow"></span>
+          </button>
+        </div>
+        <div id="customersInfo" class="hidden-nav bg-white px-[1.2rem] md:px-[1.8rem] mb-[12px] mt-3">
+          <div class="py-[36px]">
+            <div>
+              <p class="text-base text-black font-bold">FEATURED CUSTOMERS</p>
+              
+              <div class="mt-[24px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/brother logo.png" alt="">
+                </div>
+                <p class="mt-4"><a href="customer_sub_page/brother.html">Brother launches virtual assistant with Sentient.io to boost client and
+                    customer engagement</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/daido steel logo.svg" alt="">
+                </div>
+                <p class="mt-4"><a href="customer_sub_page/brother.html">Daido Steel partners with Sentient.io to improve false rejection rates by
+                    10% through an AI Defect Detection System</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/IHI_logo.png" alt="">
+                </div>
+                <p class="mt-4"><a href="customer_sub_page/ihi.html">IHI realise Smart City Vision by monitoring traffic with Sentient.io</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/mci_logo 1.png" alt="">
+                </div>
+                <p class="mt-4"><a href="customer_sub_page/mci.html">MCI boosts operational efficiency with Sentient.io’s Media Asset Management
+                    platform</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/mediacorp logo-01.png" alt="">
+                </div>
+                <p class="mt-4"><a href="customer_sub_page/media.html">Mediacorp automate translation of television dramas with Sentient.io and
+                    improve productivity by 1000%</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[200px]" src="img/ttap logo.png" alt="">
+                </div>
+                <p class="mt-4"><a href="customer_sub_page/ttp.html">Toyota Tsusho partners with Sentient.io to achieve supply chain efficiency
+                    using a virtual assistant</a></p>
+              </div>
+            </div>
+            <div class="text-black mt-[30px] flex items-center text-[14px]">
+              <a href="customer.html">Read More</a>
+              <i class="fa fa-angle-right ml-3 hover:text-[#9FE870]"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cursor-pointer">
+        <div class="px-[1.2rem] md:px-[1.8rem] flex items-center justify-between">
+          <a class="block cursor-pointer text-[20px] font-medium"  style="text-underline-offset: 8px;">Partnerships</a>
+          <button id="partnershipsButton" class="nav">
+            <span class="navarrow"></span>
+          </button>
+        </div>
+        <div id="partnershipsInfo" class="hidden-nav bg-white px-[1.2rem] md:px-[1.8rem] mb-[12px] mt-3">
+          <div class="py-[36px]">
+            <div class="">
+              <p class="text-base text-black font-bold">OUR PARTNERS</p>
+              <div class="mt-[24px] text-[14px]">
+                <p class="mb-[15px]"><a href="#">Technology Partners</a></p>
+                <p class="mb-[15px]"><a href="#">Data Partners</a></p>
+                <p class="mb-[15px]"><a href="#">Cloud Partners</a></p>
+              </div>
+            </div>
+            <div class="pt-[20px]">
+              <p class="text-base text-black font-bold">FEATURED PARTNERS</p>
+              <div class="mt-[24px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/astar ARTC logo 1.png" alt="">
+                </div>
+                <p class="mt-4"><a href="#">XXX</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/HDB logo 1.png" alt="">
+                </div>
+                <p class="mt-4"><a href="#">XXX</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/microsoft logo 1.png" alt="">
+                </div>
+                <p class="mt-4"><a href="#">XXX</a></p>
+              </div>
+              <div class="mt-[40px] text-[14px]">
+                <div class="h-[]">
+                  <img class="w-[137px]" src="img/staple 1.png" alt="">
+                </div>
+                <p class="mt-4"><a href="#">XXX</a></p>
+              </div>
+            </div>
+            <div class="pt-[20px] border-b-2 border-[#ECF0F2]"></div>
+            <div class="pt-[30px]">
+              <p class="text-base text-black font-bold">Sentient.io Partners</p>
+              <div class="mt-[24px] text-[14px]">
+                <p class=""><a href="#">Join a global community of partners and unlock unprecedented opportunities
+                    together</a></p>
+              </div>
+            </div>
+            <div class="text-black mt-[35px] flex items-center text-[14px]">
+              <a>Become a Partner</a>
+            </div>
+            <div class="text-black mt-[20px] flex items-center text-[14px]">
+              <a href="partnerships_sup_page/find.html">Find a Partner</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cursor-pointer">
+        <div class="px-[1.2rem] md:px-[1.8rem] flex items-center justify-between">
+          <a class="block cursor-pointer text-[20px] font-medium" style="text-underline-offset: 8px;">Company</a>
+          <button id="companyButton" class="nav">
+            <span class="navarrow"></span>
+          </button>
+        </div>
+        <div id="companyInfo" class="hidden-nav bg-white px-[1.2rem] md:px-[1.8rem] mb-[12px] mt-3">
+          <div class="py-[36px]">
+            <div>
+              <div class="text-[14px] pl-1">
+                <p class="mb-[15px]"><a href="company_sub_page/aboutUs.html">About Us</a></p>
+                <p class="mb-[15px]"><a href="company_sub_page/our_team.html">Our Team</a></p>
+                <p class="mb-[15px]"><a href="company_sub_page/">Press Releases</a></p>
+                <p class="mb-[15px]"><a href="company_sub_page/investors.html">Investors</a></p>
+                <p class="mb-[15px]"><a href="#">Careers</a></p>
+                <p class=""><a href="company_sub_page/contactUs.html">Contact Us</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="cursor-pointer">
+        <div class="px-[1.2rem] md:px-[1.8rem] flex items-center justify-between">
+          <a class="block cursor-pointer text-[20px] font-medium" style="text-underline-offset: 8px;">Resources</a>
+          <button id="resourcesButton" class="nav">
+            <span class="navarrow"></span>
+          </button>
+        </div>
+        <div id="resourcesInfo" class="hidden-nav bg-white px-[1.2rem] md:px-[1.8rem] mb-[12px] mt-3">
+          <div class="py-[36px]">
+            <div>
+              <div class="text-[14px] pl-1">
+                <p class="mb-[15px]"><a href="resource_sub_page/quick_start.html">Quick Start Guide</a></p>
+                <p class="mb-[15px]"><a href="#">Documentation</a></p>
+                <p class=""><a href="#">Blog</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#"
+        class="px-[1.2rem] md:px-[1.8rem] block md:hidden cursor-pointer transition duration-300 mb-[24px] focus:outline-none focus:bg-[#262A36] transition duration-300 text-[20px] font-medium"
+        style="text-underline-offset: 8px;">Login</a>
+      <a href="/company_sub_page/contactUs.html"
+        class="px-[1.2rem] md:px-[1.8rem] block md:hidden cursor-pointer transition duration-300  focus:outline-none focus:bg-[#262A36] transition duration-300 text-[20px] font-medium"
+        style="text-underline-offset: 8px;">Request a Demo</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <!----------------------------- Empowering section ----------------------------------->
+      <div
+        class="xl:px-[4.5rem] px-[0.5rem] md:px-[1.25rem] mx-auto flex flex-col bg-[url('/img/Hero\ bg-01.png')] empower-sec pb-20">
+        <div class="md:w-[74%] w-full mx-auto ">
+          <div class="md:flex block justify-center md:mb-10 mx-auto text-center">
+
+            <div class="mt-[50px] text-center flex flex-col justify-center items-center">
+              <h1
+                class="leading-snug text-white font-white lg:text-[64px] md:text-[48px] text-[40px] font-black w-full max-w-[400px] md:max-w-none md:w-[600px] lg:w-[797px]">
+                Empowering Enterprises
+                with Intelligent Solutions</h1>
+              <p
+                class="text-center text-[20px] text-white font-light mt-[28px] w-full max-w-[450px] md:max-w-[600px] lg:max-w-[780px] leading-[30px]">
+                Unlock exponential revenue growth with our enterprise-grade AI solutions. Slash production times through
+                seamless team collaboration. Elevate your multi-environment workflows with ironclad security
+                deployments.</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center md:flex-row justify-center mb-16 mx-auto text-center mt-[40px] md:mt-0">
+            <button
+              class="bg-[#9FE870] w-[210px] h-[57px] md:w-[187px] text-[18px] md:text-[20px] text-black-900 font-extrabold md:mb-0 mb-6 md:mx-3 px-[28px] py-[16px] cursor-pointer  rounded-[32px] hover:transition hover:duration-300 hover:bg-white hover:text-black"><a class="no-underline" href="company_sub_page/contactUs.html">Contact
+                Sales</a> </button>
+            <button
+              class="flex items-center justify-between text-[#9FE870] w-[210px] h-[57px] md:w-[220px] text-[18px] md:text-[20px] text-black-900 font-extrabold md:mb-0 mb-4 md:mx-3 px-[28px] py-[16px] cursor-pointer rounded-[32px] hover:transition hover:duration-300 outline outline-2 outline-[#9FE870] hover:bg-white hover:text-black hover:border-white">
+              <a class="no-underline" target="_blank" href="https://platform.sentient.io/demoapps">Try Free Demos</a>
+              <i class="fa fa-angle-right text-xl md:text-base hover:text-gray-950"></i>
+            </button>
+
+          </div>
+        </div>
+        <!-- automatic speech sec -->
+        <div class="md:w-[80%] xl:w-[75%] w-full mx-auto">
+
+          <div class="hidden sm:block">
+            <div class="flex flex-row flex-grow">
+              <div class="mx-2 my-6 align-self-center items-center hidden sm:flex flex">
+                <button role="button"
+                  class="px-4 py-2 rounded-full bg-[#262A36] hover:bg-slate-50 hover:text-black text-white bg-slate-700 group"
+                  aria-label=""><i class="fa fa-angle-left font-extrabold"></i>
+                </button>
+              </div>
+
+              <div class="bg-white p-1 rounded-2xl">
+                <div class="flex justify-center overflow-hidden relative">
+                  <div class="flex flex-col justify-center items-center rounded-2xl bg-blue-100">
+                    <img class="w-full" src="img/screenheader.png" alt="">
+                    <img class="w-full" src="img/headerLower.png" alt="">
+
+                    <div class="mt-8 w-[75%] flex flex-col items-center mb-3 rounded-lg bg-zinc-800 pt-1">
+                      <div class="flex w-full flex-row items-end">
+                        <!--
+                    <div class="md:w-[40%] lg:w-[55%] xl:w-[60%] w-[25%]"></div>
+                    <div class="ml-1 -mb-4 z-50">
+                      <small class="text-white">Singlish</small>
+                    </div>
+                  -->
+                        <div class="flex-grow text-right mr-1 -mb-4 z-50">
+                          <small class="text-white">Singlish</small>
+                        </div>
+                        <div class="justify-self-end w-48 bg-cyan-400">
+
+                        </div>
+                      </div>
+
+                      <div
+                        class="bg-zinc-800 mb-3 mx-4 w-[100%] px-4 flex flex-row rounded-lg  overflow-hidden h-20 justify-center items-center">
+                        <div class="playButton" id="playButton">
+                          <button
+                            class="flex items-center mr-4 justify-center w-12 h-12 rounded-full bg-white text-white">
+                            <svg class="w-6 h-6" fill="bg-slate-800" viewBox="0 0 24 24" stroke="bg-zinc-800">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5v14l11-7z" />
+                            </svg>
+                          </button>
+                        </div>
+
+                        <div class="pauseButton hidden" id="pauseButton">
+                          <button class="flex items-center mr-4 justify-center w-12 h-12 rounded-full bg-white">
+                            <svg class="w-6 h-6" fill="bg-gray-800" viewBox="0 0 24 24" stroke="bg-zinc-800">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 4H8v16h2V4zm6 0h-2v16h2V4z" />
+                            </svg>
+                          </button>
+                        </div>
+
+
+
+                        <div class="w-full">
+                          <div id="audio">
+                            <!-- wavesurfer script used on this element-->
+                          </div>
+                        </div>
+
+                        <div class="h-full ml-6">
+                          <div class="h-full bg-white" style="width: 1px;"></div>
+                        </div>
+
+
+                        <small class="w-12 mx-3 text-white text-center">Other ASR</small>
+
+                        <div id="toggleButton" class="mx-1 w-12 h-6 bg-lime-300 rounded-full cursor-pointer">
+                          <div id="toggleDot" class="w-6 h-6 bg-white ml-6 rounded-full shadow"></div>
+                        </div>
+
+                        <small class="w-12 ml-2 text-white text-center">Sentient ASR</small>
+
+                      </div>
+                    </div>
+
+                    <!-- div class="bg-slate-800 m-5 py-3 px-4 flex flex-row rounded-lg text-white w-[80%] mb-10">
+                      <h5 id="timestampDisplay" class="mx-2">0:0</h5>
+                      <div class="flex items-center text-center justify-center">
+                        <h4 id="subtitleDisplay" class="mx-auto">Subtitles will be displayed here in real time</h4>
+                      </div>
+                      <!-- wavesurfer script also used on this element-->
+                    <!--/div -->
+                    <div class="bg-zinc-800 py-3 px-4 flex flex-row rounded-lg text-white w-[75%] mb-6">
+                      <h5 id="timestampDisplay" class="pt-4">0:0</h5>
+
+                      <div class="flex flex-grow text-center items-center h-14">
+                        <h4 id="subtitlePrev" class="ml-1 w-[30%] text-zinc-400 h-[60%] py-1 px-1 overflow-hidden"></h4>
+                        <h4 id="subtitleDisplay" class="ml-1 w-[40%] h-[80%] bg-zinc-700 rounded-lg py-2 px-1 overflow-hidden">Kopi Kosong</h4>
+                        <h4 id="subtitleNext" class="ml-1 w-[30%] text-zinc-400 h-[60%] py-1 px-1 overflow-hidden">There's no Kopi Kosong</h4>
+                      </div>
+
+                      <!-- wavesurfer script also used on this element-->
+                    </div>
+
+                    <div class="w-[75%] items-center">
+                      <div class="flex w-full flex-row text-left">
+                        <div class="flex flex-row">
+                          <h3 class="font-semibold text-lg pt-5 px-2">Translate to</h3>
+                          <div class="relative mb-2 mt-2">
+                            <select id="dropdownMenu"
+                              class="block appearance-none w-full bg-zinc-800 text-white border border-gray-300 hover:bg-slate-700 px-5 py-2 my-2 pr-8 rounded shadow-sm leading-tight">
+                              <option value="Japanese">Japanese</option>
+                              <option value="Thai">Thai</option>
+                              <option value="Vietnamese">Vietnamese</option>
+                              <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                            </select>
+                            <div
+                              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 mr-1 text-white">
+                              <svg class="ml-1 h-6 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M6 8l4 4 4-4H6z" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bg-zinc-800 text-white px-6 py-4 mb-8 -mt-1 w-[75%] rounded-lg">
+
+                      <p id="Japanese" class="text-md text-center h-16 overflow-x-auto">
+                        コピ・コソン。 コピ・コソンなんてありませんよ。コピはコンデンスミルク入り。コピ・シュウダイはコンデンスミルクが少ないです。コピ・シーはエバミルクと砂糖入りです。コピ・シー・コソンにはエバミルクと砂糖が入っていません。コピ・オーにはミルクはなく、砂糖のみです。コピ・オー・コソンにはミルクも砂糖もありません。理解できましたか？だからコピ・コソンはありません。何が欲しい？コーラです。
+                      </p>
+
+                      <p id="Thai" class="hidden text-md text-center h-16 overflow-x-auto">โคปี้ โคซอง. ไม่มีโคปิโคซอง Kopi อยู่กับนมข้น Kopi siew dai มีนมข้นน้อยกว่า Kopi C ได้ระเหยนมและน้ําตาล Kopi C Kosong มีนมระเหยและไม่มีน้ําตาล Kopi O ไม่มีน้ําตาลนมเท่านั้น Kopi O Kosong ไม่มีนมและไม่มีน้ําตาล เข้าใจไหม  ดังนั้นจึงไม่มี Kopi Kosong สิ่งที่คุณต้องการ? โค้ก 
+                      </p>
+
+                      <p id="Vietnamese" class="hidden text-md text-center h-16 overflow-x-auto">Kopi Kosong. Không có kopi kosong. Kopi được pha với sữa đặc. Kopi siew dai có ít sữa đặc hơn. Kopi C có sữa hòa tan và đường. Kopi C Kosong có sữa hòa tan nhưng không có đường. Kopi O không có sữa, chỉ có đường. Kopi O Kosong không có sữa và không có đường. Bạn hiểu không? Vì vậy, không có Kopi Kosong. Bạn muốn gì? Coke.
+                      </p>
+
+                      <p id="Bahasa Indonesia" class="hidden text-md text-center h-16 overflow-x-auto">Kopi Kosong. Tidak ada kopi kosong. Kopi dengan susu kental manis. Kopi siew dai memiliki lebih sedikit susu kental manis. Kopi C memiliki susu evaporasi dan gula. Kopi C Kosong memiliki susu evaporasi dan tanpa gula. Kopi O tanpa susu dan hanya gula. Kopi O Kosong tidak mengandung susu dan gula. Apakah anda mengerti? Jadi tidak ada Kopi Kosong. Apa yang anda inginkan? Coca-Cola.
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+
+                  <!-- class="w-[100%] xl:w-[80%] flex justify-center items-center rounded-3xl bg-gray-100 h-[600px]"> -->
+                  <!-- <img alt="content" class="z-50 object-cover object-center sm:w-[70%] w-full"
+                  src="img/Hero page illustration with shadow.png"> -->
+
+                </div>
+              </div>
+
+              <div class="mx-2 my-6 align-self-center hidden items-center sm:flex flex">
+                <button role="button"
+                  class="px-4 py-2 rounded-full bg-[#262A36] hover:bg-slate-50 hover:text-black text-white bg-slate-700 group"
+                  aria-label=""><i class="fa fa-angle-right font-extrabold"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+
+        <!------------- DEMO APP MOBILE VIEW ---------------->
+        <div class="flex flex-col items-center">
+        <div class=" w-full">
+        <div class="sm:hidden bg-center bg-[url('img/iphone_screen.png')] bg-no-repeat h-screen bg-contain flex flex-col items-center">
+  
+          
+          <div class="flex flex-col items-center w-96 mt-40">
+            
+            <h3 class="text-2xl font-medium px-5">Automatic Speech Recognition for Asian Languages</h3>
+  
+            <div class="flex flex-col items-center px-2">
+  
+              <div class="flex flex-row mt-8 mb-3">
+                <small class="mx-3 pt-1 text-center">Other ASR</small>
+  
+                <div id="toggleButtonMobile" class="mx-1 w-12 h-6 bg-lime-400 rounded-full cursor-pointer shadow-sm">
+                  <div id="toggleDotMobile" class="transition w-6 h-6 bg-white ml-6 rounded-full shadow"></div>
+                </div>
+  
+                <small class="ml-2 pt-1 text-center">Sentient ASR</small>
+              </div>
+  
+              <div class="w-[95%] flex flex-col items-center mb-3 rounded-lg bg-zinc-800 pt-1">
+                <div class="flex w-full flex-row items-end">
+  
+                  <div class="flex-grow text-right mr-3 -mb-3 z-50">
+                    <small class="text-white">Singlish</small>
+                  </div>
+                  <div class="justify-self-end"></div>
+              
+                </div>
+  
+                <div class="bg-zinc-800 mb-4 mx-4 w-[100%] px-4 flex flex-row rounded-lg overflow-hidden h-20 justify-center items-center">
+                  <div class="" id="playButtonMobile">
+                    <button
+                      class="flex items-center -mt-1 mr-4 justify-center w-12 h-12 rounded-full bg-white text-white">
+                      <svg class="w-6 h-6" fill="bg-slate-800" viewBox="0 0 24 24" stroke="bg-zinc-800">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5v14l11-7z" />
+                      </svg>
+                    </button>
+                  </div>
+  
+                  <div class="hidden" id="pauseButtonMobile">
+                    <button class="flex items-center -mt-1 mr-4 justify-center w-12 h-12 rounded-full bg-white">
+                      <svg class="w-6 h-6" fill="bg-gray-800" viewBox="0 0 24 24" stroke="bg-zinc-800">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 4H8v16h2V4zm6 0h-2v16h2V4z" />
+                      </svg>
+                    </button>
+                  </div>
+  
+                  <div class="w-full">
+                    <div id="audioMobile">
+                      <!-- wavesurfer script used on this element-->
+                      
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+              <div class="bg-zinc-800 py-3 px-4 flex flex-row  rounded-lg text-white w-[95%] mb-6">
+                <h5 id="timestampDisplayMobile" class="pt-5">0:0</h5>
+  
+                <div class="flex flex-grow text-center items-center align-center h-16">
+                  <h4 id="subtitlePrevMobile" class="ml-1 w-[30%] text-zinc-400 py-1 px-1 overflow-hidden"></h4>
+                  <h4 id="subtitleDisplayMobile" class="ml-1 w-[40%] h-[95%] bg-zinc-700 rounded-lg py-2 px-1 overflow-hidden">Kopi Kosong</h4>
+                  <h4 id="subtitleNextMobile" class="ml-1 w-[30%] text-zinc-400 py-1 px-1 overflow-hidden">There's no Kopi Kosong</h4>
+                </div>
+                <!-- wavesurfer script also used on this element-->
+              </div>
+              
+              <div class="w-[95%] items-center">
+                <div class="flex w-full flex-row text-left">
+                  <div class="flex flex-row">
+                    <h3 class="font-semibold text-lg pt-5 px-2">Translate to</h3>
+                    <div class="relative mb-2 mt-2">
+                      <select id="dropdownMenuMobile"
+                        class="block appearance-none w-full bg-zinc-800 text-white border border-gray-300 hover:bg-slate-700 px-5 py-2 my-2 pr-8 rounded shadow-sm leading-tight">
+                          <option value="Japanese">Japanese</option>
+                          <option value="Thai">Thai</option>
+                          <option value="Vietnamese">Vietnamese</option>
+                          <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                      </select>
+                      <div
+                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 mr-1 text-white">
+                        <svg class="ml-1 h-6 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                          fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M6 8l4 4 4-4H6z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="bg-zinc-800 text-white px-6 py-4 mb-8 -mt-1 w-[95%] rounded-lg">
+  
+                <p id="JapaneseMobile" class="text-md text-center h-16 overflow-x-auto">
+                  コピ・コソン。 コピ・コソンなんてありませんよ。コピはコンデンスミルク入り。コピ・シュウダイはコンデンスミルクが少ないです。コピ・シーはエバミルクと砂糖入りです。コピ・シー・コソンにはエバミルクと砂糖が入っていません。コピ・オーにはミルクはなく、砂糖のみです。コピ・オー・コソンにはミルクも砂糖もありません。理解できましたか？だからコピ・コソンはありません。何が欲しい？コーラです。
+                </p>
+
+                <p id="ThaiMobile" class="hidden text-md text-center h-16 overflow-x-auto">โคปี้ โคซอง. ไม่มีโคปิโคซอง Kopi อยู่กับนมข้น Kopi siew dai มีนมข้นน้อยกว่า Kopi C ได้ระเหยนมและน้ําตาล Kopi C Kosong มีนมระเหยและไม่มีน้ําตาล Kopi O ไม่มีน้ําตาลนมเท่านั้น Kopi O Kosong ไม่มีนมและไม่มีน้ําตาล เข้าใจไหม  ดังนั้นจึงไม่มี Kopi Kosong สิ่งที่คุณต้องการ? โค้ก 
+                </p>
+
+                <p id="VietnameseMobile" class="hidden text-md text-center h-16 overflow-x-auto">Kopi Kosong. Không có kopi kosong. Kopi được pha với sữa đặc. Kopi siew dai có ít sữa đặc hơn. Kopi C có sữa hòa tan và đường. Kopi C Kosong có sữa hòa tan nhưng không có đường. Kopi O không có sữa, chỉ có đường. Kopi O Kosong không có sữa và không có đường. Bạn hiểu không? Vì vậy, không có Kopi Kosong. Bạn muốn gì? Coke.
+                </p>
+
+                <p id="Bahasa IndonesiaMobile" class="hidden text-md text-center h-16 overflow-x-auto">Kopi Kosong. Tidak ada kopi kosong. Kopi dengan susu kental manis. Kopi siew dai memiliki lebih sedikit susu kental manis. Kopi C memiliki susu evaporasi dan gula. Kopi C Kosong memiliki susu evaporasi dan tanpa gula. Kopi O tanpa susu dan hanya gula. Kopi O Kosong tidak mengandung susu dan gula. Apakah anda mengerti? Jadi tidak ada Kopi Kosong. Apa yang anda inginkan? Coca-Cola.
+
+                </p>
+  
+              </div>
+  
+            </div>
+            
+          
+          </div>
+          </div>
+  
+        </div>
+        </div>
+        </div>
+
+      </div>
+      
+      
+
+      </div>
+      </div>
+      <!--
+      </div>
+      </div>
+      </div>
+    -->
+
+      <!-- <div class="bg-green-100 h-48 relative -top-48 "></div> -->
+      <!------------------------------ User story section ---------------------------->
+      <div class="py-[65px] md:py-[90px]">
+        <div class="flex justify-between items-center mx-[20px] md:mx-[33px] xl:mx-[80px]">
+          <h2 class="leading-tight text-black font-bold text-[30px] md:text-5xl">
+            Success Stories</h2>
+          <div class="hidden md:block">
+            <button role="button" class="prev px-3 py-2 mr-2 rounded-full bg-gray-200 text-white group"
+              aria-label="prev"><i class="text-3xl fa fa-solid fa-arrow-left"></i>
+            </button>
+            <button role="button" class="next px-3 py-2 ml-2 rounded-full bg-black text-white group"
+              aria-label="next"><i class="text-3xl fa fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!------------------------------ User story card section ---------------------->
+        <section class="text-gray-600 body-font ml-[20px] md:ml-[33px] xl:ml-[80px]">
+          <div class="">
+            <div class="">
+              <div class="relative">
+                <div
+                  class="mt-[25px] md:mt-[70px] h-[350px] slides-container flex snap-x snap-mandatory overflow-hidden overflow-x-auto rounded scroll-smooth before:w-[0]  before:shrink-0 after:w-[55vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                  <!------------------------------------- Card 1 -------------------------------->
+                  <div class="slide aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[295px]">
+                    <div class="mt-0 pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-72 h-[290.75px] cursor-pointer px-6 py-6 shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-1 hover:outline-[#2f5233]">
+                        <div>
+                          <h2
+                            class="tracking-widest text-xs title-font md:font-bold font-extrabold text-[#EF8062] mb-4">
+                            MANUFACTURING</h2>
+                          <p class="leading-relaxed mb-3 text-[#121212] font-bold text-[#121212] text-lg">
+                            Brother launches virtual assistant with Sentient.io to boost client and customer engagement
+                          </p>
+                        </div>
+                        <a href="customer_sub_page/brother.html"class="text-indigo-500 inline-flex flex justify-between relative items-center">
+                          <img class="w-[100.86px]" src="img/brother logo.png" alt="">
+                          
+                          <i class="fa-solid fa-arrow-right-long text-[#121212] text-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[295px]">
+                    <!---------------------------------------- Card 2 --------------------------------------->
+                    <div class="mt-0 pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-72 h-[290.75px] cursor-pointer px-6 py-6 shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-1 hover:outline-[#2f5233]">
+                        <div>
+                          <h2
+                            class="tracking-widest text-xs title-font md:font-bold font-extrabold text-[#EF8062] mb-4">
+                            MANUFACTURING</h2>
+                          <p class="leading-relaxed mb-3 text-[#121212] font-bold text-[#121212] text-lg">
+                            IHI realise Smart City Vision by monitoring traffic with Sentient.io</p>
+                        </div>
+                        <a href="customer_sub_page/ihi.html" class="text-indigo-500 inline-flex flex justify-between relative items-center">
+                          <img class="w-[100.86px]" src="img/IHI logo.png" alt="">
+                          <i class="fa-solid fa-arrow-right-long text-[#121212] text-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[295px]">
+                    <!----------------------------------- Card 3 ------------------------------------------------>
+                    <div class="mt-0 pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-72 h-[290.75px] cursor-pointer px-6 py-6 shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-1 hover:outline-[#2f5233]">
+                        <div>
+                          <h2
+                            class="tracking-widest text-xs title-font md:font-bold font-extrabold text-[#EF8062] mb-4">
+                            MEDIA</h2>
+                          <p class="leading-relaxed mb-3 text-[#121212] font-bold text-[#121212] text-lg">
+                            Mediacorp automate translation of television dramas with Sentient.io and improve
+                            productivity by 1000%</p>
+                        </div>
+                        <a href="customer_sub_page/media.html" class="text-indigo-500 inline-flex flex justify-between relative items-center">
+                          <img class="w-[100.86px]" src="img/mediacorp logo.svg" alt="">
+                          <i class="fa-solid fa-arrow-right-long text-[#121212] text-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[295px]">
+                    <!------------------------------------------- Card 4 --------------------------------------->
+                    <div class="mt-0 pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-72 h-[290.75px] cursor-pointer px-6 py-6 shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-1 hover:outline-[#2f5233]">
+                        <div>
+                          <h2
+                            class="tracking-widest text-xs title-font md:font-bold font-extrabold text-[#EF8062] mb-4">
+                            MANUFACTURING</h2>
+                          <p class="leading-relaxed mb-3 text-[#121212] font-bold text-[#121212] text-lg">
+                            Daido Steel partners with Sentient.io to improve false rejection rates by 10% through an AI
+                            Defect Detection System</p>
+                        </div>
+                        <a href="customer_sub_page/daido_steel.html" class="text-indigo-500 inline-flex flex justify-between relative items-center">
+                          <img class="w-[100.86px]" src="img/daido steel logo.svg" alt="">
+                          <i class="fa-solid fa-arrow-right-long text-[#121212] text-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[295px]">
+                    <!------------------------------------------------ Card 5 ------------------------------------->
+                    <div class="mt-0 pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-72 h-[290.75px] cursor-pointer px-6 py-6 shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-1 hover:outline-[#2f5233]">
+                        <div>
+                          <h2
+                            class="tracking-widest text-xs title-font md:font-bold font-extrabold text-[#EF8062] mb-4">
+                            GOVERNMENT</h2>
+                          <p class="leading-relaxed mb-3 text-[#121212] font-bold text-[#121212] text-lg">
+                            MCI boosts operational efficiency with Sentient.io’s Media Asset Management platform</p>
+                        </div>
+                        <a href="customer_sub_page/mci.html" class="text-indigo-500 inline-flex flex justify-between relative items-center">
+                          <img class="w-[100.86px]" src="img/mci_logo 1.png" alt="">
+                          <i class="fa-solid fa-arrow-right-long text-[#121212] text-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[295px]">
+                    <!--------------------------------------------- Card 6 --------------------------------------->
+                    <div class="mt-0 pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-72 h-[290.75px] cursor-pointer px-6 py-6 shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-1 hover:outline-[#2f5233]">
+                        <div>
+                          <h2
+                            class="tracking-widest text-xs title-font md:font-bold font-extrabold text-[#EF8062] mb-4">
+                            LOGISTICS</h2>
+                          <p class="leading-relaxed mb-3 text-[#121212] font-bold text-[#121212] text-lg">
+                            Toyota Tsusho partners with Sentient.io to achieve supply chain efficiency using a virtual
+                            assistant</p>
+                        </div>
+                        <a href="customer_sub_page/ttp.html" class="text-indigo-500 inline-flex flex justify-between relative items-center">
+                          <img class="w-[100.86px]" src="img/ttap logo.png" alt="">
+                          <i class="fa-solid fa-arrow-right-long text-[#121212] text-lg"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+      </div>
+
+      <!-------------------------------------------- What we provide section --------------------------------------------->
+      <section class="whatWe py-[65px] md:py-[90px] px-[8px] md:px-[20px] lg:px-[20px] xl:px-[70px]">
+        <h1
+          class="md:text-center text-left md:ml-0 ml-3 leading-tight text-[#fff] font-bold md:text-5xl md:mb-[67px] mb-10 text-[30px]">
+          What We Provide</h1>
+        <div class="hidden md:flex justify-center">
+          <button class="btn active" data-target="#micro">Build & Deploy</button>
+          <button class="btn" data-target="#team">Collaborate</button>
+          <button class="btn" data-target="#workflow">ML Workflows</button>
+        </div>
+        <div class="md:h-[500px] lg:h-[450px]">
+          <div class="tab-content active" id="micro">
+
+            <div class="p-4 pb-14 md:pb-20 mt-10 lg:flex w-full mx-auto">
+              <div class="hidden md:block w-[full] lg:w-[700px] lg:px-8 py-4">
+                <img class="lg:w-full  w-1/6" src="img/microservice-platform-illustration.png" alt="">
+              </div>
+              <div class="md:w-5/6 w-full pb-14 lg:px-8 relative">
+                <h2 class="text-white text-left text-[20px] md:text-2xl">
+                  Build and Deploy
+                </h2>
+                <p class="text-white text-left mt-6 text-[16px] md:text-xl font-light leading-9 lg:w-[80%]">
+                  Our platform offers a wide array of AI
+                  microservices spanning
+                  categories like NLP, Computer Vision, Voice, Data Analytics and other sub-domains.</p>
+                <p class="text-white text-left mt-3 md:mt-6 text-[16px] md:text-xl font-light leading-9 lg:w-[80%]">
+                  Together with custom model training, API chaining, pipeline orchestration and cost optimisation,
+                  elevate your AI management system as well.</p>
+                <button
+                  class="text-[12px] md:text-[16px] w-[96px] h-[32px] md:w-[135px] md:h-[46px] absolute lg:left-8 font-extrabold bg-[#9FE870] text-black mt-10 rounded-4xl hover:bg-white hover:text-black">Learn
+                  more</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="team">
+            <div class="p-4 pb-14 md:pb-20 lg:flex w-full mx-auto">
+              <div class="hidden md:block w-[full] lg:w-[700px] lg:px-8 py-4">
+                <img class="lg:w-full  w-1/6" src="img/teamspaces illustration.png" alt="">
+              </div>
+              <div class="sm:w-5/6 w-full pb-14 lg:px-8 relative">
+                <h2 class="text-white text-left text-[20px] md:text-2xl">
+                  TeamSpaces Providing Collaboration
+                </h2>
+                <p class="text-white text-left mt-6 text-[16px] md:text-xl font-light leading-9 lg:w-[80%]">
+                  In the field of AI development, collaboration is the key to success.</p>
+                <p class="text-white text-left mt-3 md:mt-6 text-[16px] md:text-xl font-light leading-9 lg:w-[80%]">
+                  With TeamSpaces, collaborate efficiently on projects and empower your development teams to work
+                  smarter together.</p>
+                <button
+                  class="text-[12px] md:text-[16px] w-[96px] h-[32px] md:w-[135px] md:h-[46px] absolute lg:left-8 font-extrabold bg-[#9FE870] text-black mt-10 rounded-4xl hover:bg-white hover:text-black">Learn
+                  more</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="workflow">
+            <div class="p-4 md:pb-20 lg:flex w-full mx-auto">
+          <div class=" hidden md:block w-[full] lg:w-[700px] lg:px-8 py-4">
+              <img class="lg:w-full  w-1/6" src="img/wokrflow mgmt illustration.png" alt="">
+            </div>
+            <div class="sm:w-5/6 w-full pb-14 lg:px-8 relative">
+              <h2 class="text-white text-left text-[20px] md:text-2xl">
+                ML Workflows
+              </h2>
+              <p class="text-white text-left mt-6 text-[16px] md:text-xl font-light leading-9 lg:w-[80%]">
+                Unlock specially curated solutions trained to fit your industry’s needs and specifications.</p>
+              <p class="text-white text-left mt-3 md:mt-6 text-[16px] md:text-xl font-light leading-9 lg:w-[80%]">
+                From multi-cloud deployments to private secure servers, our platform helps you optimise your workflows.
+              </p>
+              <button
+                class="text-[12px] md:text-[16px] w-[96px] h-[32px] md:w-[135px] md:h-[46px] absolute lg:left-8 font-extrabold bg-[#9FE870] text-black mt-10 rounded-4xl hover:bg-white hover:text-black">Learn
+                more</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------------- Process flow section --------------------------------------------->
+      <section class="bg-[#ECF0F2] py-[65px] md:py-[90px]">
+        <div class="text-left md:text-center lg:text-left">
+          <h1
+            class="text-black-400 font-bold text-[30px] md:text-5xl mb-[50px] mx-[18px] md:mx-[11%] lg:mx-[30px] max-w-[400px] md:max-w-none xl:mx-[80px] lg:max-w-[766px] md:leading-[65.47px]">
+            From idea to impact within weeks, not years</h1>
+          <div class="lg:flex block justify-center mx-[18px] mb-10 text-lg">
+            <!-- Exec. Briefing Start -->
+            <div class="relative flex lg:flex-col flex-row items-left group lg:w-[230px] w-full lg:border-r-[1px] lg:border-r-[#AEAEAE]">
+              <h2
+                class="bg-[#4ea71a] text-left flex items-center popover__title text-white py-4 px-4 lg:py-5 lg:px-6 xl:w-[100%] lg:w-[100%] w-[80%] leading-normal font-bold h-[80px] lg:h-[113px] text-[16px] md-[18px]">
+                Business Need <br> Analysis
+              </h2>
+              <div
+                class="absolute lg:bottom-24 bottom-10 w-[307px] flex flex-col items-start hidden lg:mb-[83px] mb-8 group-hover:flex">
+                <span
+                  class="relative z-10 text-left p-3 leading-tight text-black whitespace-no-wrap bg-white text-[16px] md-[18px]">Discussion
+                  of solution parameters and success conditions</span>
+                <div class="w-4 h-3 -mt-2 rotate-45 bg-white relative -right-[20px]"></div>
+              </div>
+              <div
+                class="text-right flex items-center justify-end lg:w-[100%] w-[30%] lg:border-[#aeaeae] lg:border-r-[1px] lg:py-5 lg:px-6 sm:pl-4 pl-2 pr-2 text-[16px] md-[18px] border-b-[1px] border-[#AEAEAE] lg:border-none">
+                3 <br class="lg:hidden"> Hours</div>
+            </div>
+            <!-- Exec. Briefing End  -->
+            <!-- Technology Assessment Start -->
+
+            <div class="relative flex lg:flex-col flex-row items-left group lg:w-[290px] w-full lg:border-r-[1px] lg:border-r-[#AEAEAE]">
+              <h2
+                class="bg-[#52b21c] text-left flex items-center popover__title text-white py-4 px-4 lg:py-5 lg:px-6 xl:w-[100%] lg:w-[100%] w-[80%] leading-normal font-bold h-[97px] lg:h-[113px] text-[16px] md-[18px]">
+                Technology<br>
+                Assessment</h2>
+              <div
+                class="absolute lg:bottom-24 bottom-14 w-[295px] flex flex-col items-start hidden lg:mb-[83px] mb-8 group-hover:flex">
+                <span
+                  class="relative z-10 text-left p-2 leading-tight  text-black whitespace-no-wrap bg-white text-[16px] md-[18px]">Consideration
+                  of solution gallery and existing solutions</span>
+                <div class="w-4 h-3 -mt-2 rotate-45 bg-white relative -right-[20px]"></div>
+              </div>
+              <div
+                class="text-right flex items-center justify-end lg:w-[100%] w-[30%] lg:border-[#aeaeae] lg:border-r-[1px] lg:py-5 lg:px-6 sm:pl-4 pl-2 pr-2 text-[16px] md-[18px] border-b-[1px] border-[#AEAEAE] lg:border-none">
+                1-2 <br class="lg:hidden"> Weeks
+              </div>
+            </div>
+            <!-- Technology Assessment End  -->
+
+            <!-- Production Trial Start -->
+
+            <div class="relative flex lg:flex-col flex-row items-left group lg:w-[520px] w-full lg:border-r-[1px] lg:border-r-[#AEAEAE]">
+              <h2
+                class="bg-[#56bc1d] text-left flex items-center popover__title text-white py-4 px-4 lg:py-5 lg:px-6 xl:w-[100%] lg:w-[100%] w-[80%] leading-normal font-bold h-[131px] lg:h-[113px] text-[16px] md-[18px]">
+                Production<br>
+                Trial</h2>
+              <div
+                class="absolute lg:bottom-24 bottom-[65px] w-[253px] flex flex-col items-start hidden lg:mb-[83px] mb-8 group-hover:flex">
+                <span class="relative z-10 text-left p-2 leading-tight text-black whitespace-no-wrap bg-white text-[16px] md-[18px]">Trial
+                  of
+                  solution and testing </span>
+                <div class="w-4 h-3 -mt-2 rotate-45 bg-white relative -right-[20px]"></div>
+              </div>
+              <div
+                class="text-right flex items-center justify-end lg:w-[100%] w-[30%] lg:border-[#aeaeae] lg:border-r-[1px] lg:py-5 lg:px-6 sm:pl-4 pl-2 pr-2 text-[16px] md-[18px] border-b-[1px] border-[#AEAEAE] lg:border-none">
+                3 <br class="lg:hidden"> Months
+              </div>
+            </div>
+            <!-- Production Trial End  -->
+            <!-- Deployment Start -->
+            <div class="relative flex lg:flex-col flex-row items-left group lg:w-[314px] w-full">
+              <h2
+                class="bg-[#5bc81e] text-left flex items-center popover__title text-white py-4 px-4 lg:py-5 lg:px-6 xl:w-[100%] lg:w-[100%] w-[80%] leading-normal font-bold h-[88px] lg:h-[113px] text-[16px] md-[18px]">
+                Deployment</h2>
+              <div
+                class="absolute lg:bottom-24 bottom-[35px] flex flex-col items-start w-[275px] hidden lg:mb-[83px] mb-8 group-hover:flex">
+                <span class="relative z-10 text-left p-2 leading-tight text-black whitespace-no-wrap bg-white text-[16px] md-[18px]">Running
+                  of
+                  solution based on use case - platform deployment, project deployment.</span>
+                <div class="w-4 h-3 -mt-2 rotate-45 bg-white relative -right-[20px]"></div>
+              </div>
+              <div class="text-right flex items-center justify-end lg:w-[100%] w-[30%] lg:py-5 lg:px-6 sm:pl-4 pl-2 pr-2 text-[16px] md-[18px] border-b-[1px] border-[#AEAEAE] lg:border-none">
+                2-3 <br class="lg:hidden"> 
+                Weeks</div>
+            </div>
+            <!-- Deployment End  -->
+          </div>
+        </div>
+      </section>
+      <!-------------------------------------- Hear from Our Customers sections--------------------------------------------->
+      <div class="py-[65px] md:py-[90px]">
+        <div class="flex justify-between items-center mx-[20px] md:mx-[30px] xl:mx-[80px]">
+          <h2 class="leading-tight text-black font-bold md:text-5xl text-[30px] w-full md:w-[80%] lg:w-full">
+            Hear from Our Customers</h2>
+          <div class="hidden md:flex">
+            <button role="button" class="prev1 px-3 py-2 mr-2 rounded-full bg-gray-200 text-white group"
+              aria-label="prev1"><i class="text-3xl fa fa-solid fa-arrow-left"></i>
+            </button>
+            <button role="button" class="next1 px-3 py-2 ml-2 rounded-full bg-black text-white group"
+              aria-label="next1"><i class="text-3xl fa fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <section class="text-gray-600 body-font">
+          <div class="">
+            <div class="">
+              <div class="relative">
+                <div
+                  class="ml-[20px] md:ml-[30px] xl:ml-[80px] h-[310px] slides-container1 mt-6 md:mt-20 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[0]  before:shrink-0 after:w-[55vw] after:shrink-0 md:before:w-0 md:after:w-0">
+                  <!------------------------------------- Card 1 -------------------------------->
+                  <div
+                    class="slide1 aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[350px] md:max-w-[390px] w-[100%]">
+                    <div class="pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-64 h-[254px] cursor-pointer px-[30px] py-[30px] md:px-[40px] md:py-[32px] shadow-[0_0_3px_rgb(0,0,0,0.1),0_4.34px_11.6px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-2 hover:outline-[#479117]">
+                        <p class="leading-relaxed mb-3 text-[#121212] text-[20px]">"Aenean
+                          consectetur
+                          odio in
+                          condimen tristique. Nam hendrerit urnaex."</p>
+                        <div class="text-[15px] md:text-[16px]">
+                          <p class="font-semibold">Name</p>
+                          <p>Position</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!------------------------------------- Card 2 -------------------------------->
+                  <div
+                    class="slide1 aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[350px] w-[100%]">
+                    <div class="pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-64 h-[254px] cursor-pointer px-[30px] py-[30px] md:px-[40px] md:py-[32px] shadow-[0_0_3px_rgb(0,0,0,0.1),0_4.34px_11.6px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-2 hover:outline-[#479117]">
+                        <p class="leading-relaxed mb-3 text-[#121212] text-[20px]">"Aenean
+                          consectetur
+                          odio in
+                          condimen tristique. Nam hendrerit urnaex."</p>
+                        <div class="text-[15px] md:text-[16px]">
+                          <p class="font-semibold">Name</p>
+                          <p>Position</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!------------------------------------- Card 3 -------------------------------->
+                  <div
+                    class="slide1 aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[350px] w-[100%]">
+                    <div class="pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-64 h-[254px] cursor-pointer px-[30px] py-[30px] md:px-[40px] md:py-[32px] shadow-[0_0_3px_rgb(0,0,0,0.1),0_4.34px_11.6px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-2 hover:outline-[#479117]">
+                        <p class="leading-relaxed mb-3 text-[#121212] text-[20px]">"Aenean
+                          consectetur
+                          odio in
+                          condimen tristique. Nam hendrerit urnaex."</p>
+                        <div class="text-[15px] md:text-[16px]">
+                          <p class="font-semibold">Name</p>
+                          <p>Position</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!------------------------------------- Card 4 -------------------------------->
+                  <div
+                    class="slide1 aspect-square flex-shrink-0 snap-center rounded overflow-hidden max-w-[350px] w-[100%]">
+                    <div class="pt-4 pl-1 pr-4">
+                      <div
+                        class="flex flex-col justify-between lg:h-64 h-[254px] cursor-pointer px-[30px] py-[30px] md:px-[40px] md:py-[32px] shadow-[0_0_3px_rgb(0,0,0,0.1),0_4.34px_11.6px_rgb(98,191,109,0.2)] rounded-2xl relative hover:outline hover:outline-2 hover:outline-[#479117]">
+                        <p class="leading-relaxed mb-3 text-[#121212] text-[20px]">"Aenean
+                          consectetur
+                          odio in
+                          condimen tristique. Nam hendrerit urnaex."</p>
+                        <div class="text-[15px] md:text-[16px]">
+                          <p class="font-semibold">Name</p>
+                          <p>Position</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+      </div>
+    </section>
+    <!-------------------------------------------- Ready to enter the world ----------------------------------->
+    <div class="py-12 md:py-32 mx-auto flex flex-col ready-to-enter">
+      <div class="w-full px-[16px] md:px-[98px] lg:px-[120px] mx-auto flex flex-col xl:flex-row">
+        <div class="flex flex-col justify-center md:flex-row  w-full xl:mr-[100px]">
+          <div class="w-full px-2 md:px-0 lg:max-w-[600px] xl:max-w-[502px]">
+            <h1
+              class="text-center xl:text-left leading-tight md:leading-[90px] text-white text-[36px] md:text-[64px] font-bold mb-[70px] xl:mb-0 xl:font-extrabold">
+              Ready to enter the
+              world of AI?
+            </h1>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="bg-[#9FE870] w-[215px] h-[61px] xl:w-[374px] xl:h-[129px] text-[24px] md:text-[36px] md:w-[276px] md:h-[89px] text-black-900 font-extrabold md:font-bold cursor-pointer  rounded-full mx-5 md:px-[28px] md:py-[16px] hover:transition hover:duration-300 hover:bg-white hover:text-black"><a class="no-underline" href="company_sub_page/contactUs.html">Contact
+            Us</a></button>
+        </div>
+
+
+      </div>
+    </div>
+    <!-------------------------------------------- contact us section ----------------------------------------->
+    <!-- <section class="bg-white">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us
+      </h2>
+      <form action="#" class="space-y-8 p-8 border border-gray-500 rounded-md">
+        <div class="block sm:flex justify-between">
+          <div class="w-full sm:w-80">
+            <label for="name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name<span>*</span></label>
+            <input type="name" id="name"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="" required>
+          </div>
+          <div class="w-full sm:w-80">
+            <label for="contact" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Contact
+              Number<span>*</span></label>
+            <input type="contact" id="contact"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="" required>
+          </div>
+        </div>
+        <div class="block sm:flex justify-between">
+          <div class="w-full sm:w-80">
+            <label for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email<span>*</span></label>
+            <input type="email" id="email"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="" required>
+          </div>
+          <div class="w-full sm:w-80">
+            <label for="industry"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Industry<span>*</span></label>
+            <input type="industry" id="contact"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="" required>
+
+          </div>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="message"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Message<span>*</span></label>
+          <textarea id="message" rows="6"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            placeholder="Leave a comment..."></textarea>
+        </div>
+        <div class="flex justify-center">
+          <button type="submit"
+            class="bg-[#9FE870] text-black-900 font-bold mx-5 px-5 py-2 rounded-3xl">Send
+            message</button>
+        </div>
+      </form>
+    </div>
+
+
+  </section> -->
+    </section>
+
+  </main>
+  <!-------------------------------------- Footer section -------------------------------------->
+  <footer class="bg-[#F3F3F3] flex-col lg:pb-[50px] lg:pt-[112px] xl:px-[70px] px-[1.2rem] pb-[3.3rem] pt-[5.875rem]">
+    <!-------------------------------------- Top of Footer -------------------------------------->
+    <div class="flex flex-col md:flex-row justify-between">
+      <!-------------------------------------- Left Top of Footer -------------------------------------->
+      <div>
+        <div class="mb-[1.1rem]">
+          <img class="w-[135px] md:w-[200px]" src="img/logo1.png" alt="">
+        </div>
+        <div class="pl-2 mb-[1.1rem] flex my-[0.5rem]">
+          <div><img class="mt-1 w-4 mr-4" src="img/location icon.png" alt=""></div>
+          <div class="text-[#525252] text-base">
+            <p class="mb-[0.7rem]">3 Fusionopolis Place,</p>
+            <p class="mb-[0.7rem]">#03-56 Galaxis Work Lofts</p>
+            <p>Singapore 138523</p>
+          </div>
+        </div>
+        <div class="pl-2 w-full text-base flex text-center">
+          <div>
+            <img class="w-4 mr-4 mt-2" src="img/mail icon.png" alt="">
+          </div>
+          <p class="text-[#525252]">enquiry@sentient.io</p>
+        </div>
+      </div>
+      <!-------------------------------------- Right Top of Footer -------------------------------------->
+      <div class="pl-2 flex flex-col md:flex-row md:pl-0 pt-[3.6rem] md:pt-0 mt-3">
+        <div class="md:mr-[3rem] lg:mr-[5rem]">
+          <div class="pb-3 md:pb-2 flex items-center justify-between md:justify-start text-base">
+            <p><a class="text-[#121212] font-bold">PLATFORM</a></p>
+          </div>
+          <div class="text-[#525252] text-base">
+            <p class="py-1.5"><a href="#">Build & Deploy</a></p>
+            <p class="py-1.5"><a href="#">Collaborate</a></p>
+            <p class="pt-1.5 pb-4 md:py-1.5"><a href="#">ML Workflows</a></p>
+          </div>
+        </div>
+        <div class="md:mr-[3rem] lg:mr-[5rem]">
+          <div class="pb-3 pt-6 md:pt-0 md:pb-2 flex items-center justify-between md:justify-start text-base">
+            <p><a class="text-[#121212] font-bold">COMPANY</a></p>
+          </div>
+          <div class="text-[#525252] text-base">
+            <p class="py-1.5"><a href="#">About Us</a></p>
+            <p class="py-1.5"><a href="#">Our Team</a></p>
+            <p class="py-1.5"><a href="#">Press Releases</a></p>
+            <p class="py-1.5"><a href="#">Investors</a></p>
+            <p class="py-1.5"><a href="#">Careers</a></p>
+            <p class="py-1.5"><a href="company_sub_page/contactUs.html">Contact Us</a></p>
+
+          </div>
+        </div>
+        <div class="">
+          <div class="pb-3 pt-6 md:pt-0 md:pb-2 flex items-center justify-between md:justify-start text-base">
+            <p><a class="text-[#121212] font-bold">RESOURCE</a></p>
+          </div>
+          <div class="text-[#525252] text-base">
+            <p class="py-1.5"><a href="#">Quick Start Guide</a></p>
+            <p class="py-1.5"><a href="#">Documentation</a></p>
+            <p class="py-1.5"><a href="#">Blog</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------- Bottom of Footer -------------------------------------->
+    <div class="flex flex-col md:flex-row justify-between mt-[2rem] md:mt-[8.25rem]">
+      <div class="pl-2 text-[15px]">
+        <p class="text-[#525252]">Copyright © 2023 Sentient.io</p>
+      </div>
+      <div class="pl-2 md:pl-0 flex flex-col md:flex-row justify-center md:items-center text-[15px]">
+        <p class="text-[#525252] mr-6 mt-[16px] md:mt-0">Privacy Policy</p>
+        <div class="flex mt-[16px] md:mt-0">
+          <img class="w-6 mr-6 ml-1 md:ml-0" src="img/Vector (2).png" alt="">
+          <img class="w-6 mr-6" src="img/Group 67.png" alt="">
+          <img class="w-6" src="img/Group 68.png" alt="">
+        </div>
+        <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-[10px] mx-2 text-sm fa fa-brands fa-facebook-f"></i> -->
+        <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-2 mx-2 text-sm fa fa-brands fa-youtube"></i> -->
+        <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-2 mx-2 text-sm fa fa-brands fa-linkedin-in"></i> -->
+      </div>
+    </div>
+  </footer>
+  <script>
+
+    // ----------------------------------------- Mobile view header script -------------------------------------
+    const btn = document.getElementById('menu-btn')
+    const nav = document.getElementById('menu')
+    const hamburger_span = document.getElementById('hamburger_span')
+    const hamburger_span_bottom = document.getElementById('hamburger_span_bottom')
+
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open')
+      hamburger_span.classList.toggle('bg-white')
+      hamburger_span.classList.toggle('bg-black')
+      hamburger_span_bottom.classList.toggle('bg-white')
+      hamburger_span_bottom.classList.toggle('bg-black')
+      nav.classList.toggle('hidden')
+    })
+
+    // ----------------------------- Success stories next and prev slide script ----------------------------------
+    const slidesContainer = document.querySelector(".slides-container");
+    const slideWidth = slidesContainer.querySelector(".slide").clientWidth;
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+
+    nextButton.addEventListener("click", () => {
+      slidesContainer.scrollLeft += slideWidth;
+    });
+
+    prevButton.addEventListener("click", () => {
+      slidesContainer.scrollLeft -= slideWidth;
+    });
+
+    slidesContainer.addEventListener("scroll", () => {
+      if (slidesContainer.scrollLeft === 0) {
+        prevButton.classList.add("bg-gray-200");
+      } else {
+        prevButton.classList.remove("bg-gray-200");
+        prevButton.classList.add("bg-black");
+      }
+
+      if (slidesContainer.scrollLeft + slidesContainer.offsetWidth + 1 >= slidesContainer.scrollWidth) {
+        nextButton.classList.add("bg-gray-200");
+      } else {
+        nextButton.classList.remove("bg-gray-200");
+      }
+    });
+
+    // ----------------------------- Hear from Our Customers next and prev slide script ----------------------------------
+    const slidesContainer1 = document.querySelector(".slides-container1");
+    const slideWidth1 = slidesContainer1.querySelector(".slide1").clientWidth;
+    const prevButton1 = document.querySelector(".prev1");
+    const nextButton1 = document.querySelector(".next1");
+
+    nextButton1.addEventListener("click", () => {
+      slidesContainer1.scrollLeft += slideWidth1;
+    });
+
+    prevButton1.addEventListener("click", () => {
+      slidesContainer1.scrollLeft -= slideWidth1;
+    });
+
+    slidesContainer1.addEventListener("scroll", () => {
+      if (slidesContainer1.scrollLeft === 0) {
+        prevButton1.classList.add("bg-gray-200");
+      } else {
+        prevButton1.classList.remove("bg-gray-200");
+        prevButton1.classList.add("bg-black");
+      }
+
+      if (slidesContainer1.scrollLeft + slidesContainer1.offsetWidth + 1 >= slidesContainer1.scrollWidth) {
+        nextButton1.classList.add("bg-gray-200");
+      } else {
+        nextButton1.classList.remove("bg-gray-200");
+      }
+    });
+
+    // ------------------- What we provide tab content script --------------------
+    const btns = document.querySelectorAll(".btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+    btns.forEach((btn) => {
+      btn.addEventListener("mouseover", () => {
+        btns.forEach((btn) => btn.classList.remove("active"));
+        tabContents.forEach((tabContent) =>
+          tabContent.classList.remove("active")
+        );
+        btn.classList.add("active");
+        document.querySelector(btn.dataset.target).classList.add("active");
+      });
+    });
+
+    // ----------------------------------------- iPad and Mobile Nav script -------------------------------------
+
+    const productButton = document.getElementById('productButton')
+    const productInfo = document.getElementById('productInfo')
+
+    productButton.addEventListener('click', () => {
+      productButton.classList.toggle('open')
+      if (productInfo.classList.contains('hidden-nav')) {
+        productInfo.classList.remove('hidden-nav')
+        productInfo.classList.add('visible-nav')
+      } else {
+        productInfo.classList.remove('visible-nav')
+        productInfo.classList.add('hidden-nav')
+      }
+    })
+
+    const solutionsButton = document.getElementById('solutionsButton')
+    const solutionsInfo = document.getElementById('solutionsInfo')
+
+    solutionsButton.addEventListener('click', () => {
+      solutionsButton.classList.toggle('open')
+      if (solutionsInfo.classList.contains('hidden-nav')) {
+        solutionsInfo.classList.remove('hidden-nav')
+        solutionsInfo.classList.add('visible-nav')
+      } else {
+        solutionsInfo.classList.remove('visible-nav')
+        solutionsInfo.classList.add('hidden-nav')
+      }
+    })
+
+    const customersButton = document.getElementById('customersButton')
+    const customersInfo = document.getElementById('customersInfo')
+
+    customersButton.addEventListener('click', () => {
+      customersButton.classList.toggle('open')
+      if (customersInfo.classList.contains('hidden-nav')) {
+        customersInfo.classList.remove('hidden-nav')
+        customersInfo.classList.add('visible-nav')
+      } else {
+        customersInfo.classList.remove('visible-nav')
+        customersInfo.classList.add('hidden-nav')
+      }
+    })
+
+    const partnershipsButton = document.getElementById('partnershipsButton')
+    const partnershipsInfo = document.getElementById('partnershipsInfo')
+
+    partnershipsButton.addEventListener('click', () => {
+      partnershipsButton.classList.toggle('open')
+      if (partnershipsInfo.classList.contains('hidden-nav')) {
+        partnershipsInfo.classList.remove('hidden-nav')
+        partnershipsInfo.classList.add('visible-nav')
+      } else {
+        partnershipsInfo.classList.remove('visible-nav')
+        partnershipsInfo.classList.add('hidden-nav')
+      }
+    })
+
+    const companyButton = document.getElementById('companyButton')
+    const companyInfo = document.getElementById('companyInfo')
+
+    companyButton.addEventListener('click', () => {
+      companyButton.classList.toggle('open')
+      if (companyInfo.classList.contains('hidden-nav')) {
+        companyInfo.classList.remove('hidden-nav')
+        companyInfo.classList.add('visible-nav')
+      } else {
+        companyInfo.classList.remove('visible-nav')
+        companyInfo.classList.add('hidden-nav')
+      }
+    })
+
+    const resourcesButton = document.getElementById('resourcesButton')
+    const resourcesInfo = document.getElementById('resourcesInfo')
+
+    resourcesButton.addEventListener('click', () => {
+      resourcesButton.classList.toggle('open')
+      if (resourcesInfo.classList.contains('hidden-nav')) {
+        resourcesInfo.classList.remove('hidden-nav')
+        resourcesInfo.classList.add('visible-nav')
+      } else {
+        resourcesInfo.classList.remove('visible-nav')
+        resourcesInfo.classList.add('hidden-nav')
+      }
+    })
+  </script>
+
+  <script src="js/demoAppScripts.js"></script>
+</body>
+
+</html>

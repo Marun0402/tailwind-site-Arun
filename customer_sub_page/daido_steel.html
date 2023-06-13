@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentient</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nunito Sans";
+        }
+    </style>
+    <script src="https://unpkg.com/wavesurfer.js@6.6"></script>
+</head>
+
+<body>
+    <header class="bg-[#fff] sticky top-0 z-[100] h-header items-center flex justify-between xl:px-[4.5rem] px-[2rem]">
+        <div class="flex group lg:w-[60%] md:w-[50%] items-center">
+            <!-- Logo -->
+            <div class="flex justify-center items-center">
+                <!-- <img class="h-6" src="img/Sentient logo white-01.png" alt="Logo" /> -->
+                <a href="../index.html">
+                    <img class="md:w-[176px] md:h-[49.7px] w-[260.1px] h-[68.576px]"
+                        src="../img/Sentient-io_logo_RGB_Horizontal_No-Tagline_Black 2.png" alt="Logo" />
+                </a>
+            </div>
+
+            <!-- Menu Items -->
+            <nav id=''
+                class="md:w-[40%] w-auto hidden space-x-6 xl:flex menu-item-header ml-10 font-medium text-header-gray">
+                <div class="relative">
+                    <div class="dropdown relative inline-block cursor-pointer">
+                        <button
+                            class="text-black hover:text-gray-600 cursor-pointer hover:transition hover:duration-300">Platform</button>
+                        <div
+                            class="dropdown-content absolute bg-[#fff] z-1 rounded-lg w-[700px] mt-2 font-normal shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(0,0,0,0.2)] -left-[200px]">
+                            <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[225px]"></div>
+                            <div class="flex p-3 w-full">
+                                <div class="mx-6 w-[33%]">
+                                    <h2 class="text-black font-extrabold text-sm">BUILD & DEPLOY</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Our
+                                            Microservices</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Data
+                                            Modeling</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Model
+                                            Optimisation</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Integrate &
+                                            Chain APIs</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Measure
+                                            ROI</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Cost
+                                            Reduction</a>
+                                    </div>
+                                </div>
+                                <div class="mx-6 w-[33%]">
+                                    <h2 class="text-black font-extrabold text-sm">COLLABORATE</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">TeamSpaces</a>
+                                    </div>
+                                </div>
+                                <div class="mx-6 w-[33%]">
+                                    <h2 class="text-black font-extrabold text-sm">ML WORKFLOWS</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Multi-cloud
+                                            Workflows</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Edge
+                                            Computing</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Secure
+                                            Deployments</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Analytics</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="relative">
+                    <div class="dropdown relative inline-block cursor-pointer">
+                        <button
+                            class="text-black hover:text-gray-600 cursor-pointer hover:transition hover:duration-300">Solutions</button>
+                        <div
+                            class="dropdown-content absolute bg-[#fff] shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(0,0,0,0.2)] z-1 rounded-lg w-[800px] mt-2 font-normal -left-[250px]">
+                            <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[280px]"></div>
+                            <div class="flex p-3 w-full">
+                                <div class="mx-6 w-[44%]">
+                                    <h2 class="text-black font-extrabold text-sm">Unsure where to start?</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block text-sm" href="#">AI Clinic - Our
+                                            Diagnostic Centre</a>
+                                    </div>
+                                </div>
+                                <div class="mx-6 w-[28%]">
+                                    <h2 class="text-black font-extrabold text-sm">INDUSTRY SOLUTIONS</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Manufacturing</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Media</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Logistics</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Defence</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Government</a>
+                                    </div>
+                                </div>
+                                <div class="mx-6 w-[28%]">
+                                    <h2 class="text-black font-extrabold text-sm">ML WORKFLOWS</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Demand
+                                            Forecasting</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Inventory
+                                            Optimisation</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Load
+                                            Planning</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Workplace
+                                            Safety</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Defect
+                                            Detection</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="dropdown relative inline-block cursor-pointer">
+                        <button
+                            class="text-black hover:text-gray-600 cursor-pointer hover:transition hover:duration-300">
+                            <a href="/customer.html" class="no-underline">Customers</a> </button>
+                        <div
+                            class="dropdown-content absolute bg-[#fff] shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(0,0,0,0.2)] z-1 rounded-lg w-[950px] mt-2 font-normal -left-[350px]">
+                            <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[380px]"></div>
+                            <h3 class="mx-8 text-sm font-extrabold my-5 text-black">FEATURED CUSTOMERS</h3>
+                            <div class="flex p-3 w-full">
+                                <div class="mx-6 w-[33%]">
+                                    <div class="h-32">
+                                        <img class="w-24" src="../img/brother logo.png" alt="">
+                                        <p class="my-4 text-sm text-black font-bold">Brother launches virtual assistant
+                                            with Sentient.io to
+                                            boost client and customer engagement</p>
+                                    </div>
+                                    <div class="h-32">
+                                        <img class="w-32" src="../img/mci_logo 1.png" alt="">
+                                        <p class="my-4 text-sm text-black font-bold">MCI boosts operational efficiency
+                                            with Sentient.io’s
+                                            Media Asset Management platform</p>
+                                    </div>
+
+                                </div>
+                                <div class="mx-6 w-[33%]">
+                                    <div class="h-32">
+                                        <img class="w-24" src="../img/daido steel logo-01.png" alt="">
+                                        <p class="my-4 text-sm text-black font-bold">Daido Steel partners with
+                                            Sentient.io to improve false
+                                            rejection rates by 10% through an AI Defect Detection System</p>
+                                    </div>
+                                    <div class="h-32">
+                                        <img class="w-24" src="../img/mediacorp logo-01.png" alt="">
+                                        <p class="my-4 text-sm text-black font-bold">Mediacorp automate translation of
+                                            television dramas
+                                            with Sentient.io and improve productivity by 1000%</p>
+                                    </div>
+                                </div>
+                                <div class="mx-6 w-[33%]">
+                                    <div class="h-32">
+                                        <img class="w-24" src="../img/IHI_logo.png" alt="">
+                                        <p class="my-4 text-sm text-black font-bold">IHI realise Smart City Vision by
+                                            monitoring traffic
+                                            with Sentient.io</p>
+                                    </div>
+                                    <div class="h-32">
+                                        <img class="w-32" src="../img/ttap logo.png" alt="">
+                                        <p class="my-4 text-sm text-black font-bold">Toyota Tsusho partners with
+                                            Sentient.io to achieve
+                                            supply chain efficiency using a virtual assistant</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <a class="text-black hover:text-gray-600 cursor-pointer">Partners</a>
+                </div>
+                <div class="relative">
+                    <div class="dropdown relative inline-block cursor-pointer">
+                        <button
+                            class="text-black hover:text-gray-600 cursor-pointer hover:transition hover:duration-300">Company</button>
+                        <div
+                            class="dropdown-content absolute bg-[#fff] shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(0,0,0,0.2)] z-1 rounded-lg w-[200px] mt-2 font-normal -left-[60px]">
+                            <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[88px]"></div>
+                            <div class="flex p-3 w-full">
+                                <div class="mx-6">
+                                    <h2 class="text-black font-extrabold text-sm">COMPANY</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">About
+                                            Us</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Our
+                                            Team</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Press
+                                            Releases</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Investors</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Careers</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Contact
+                                            Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="dropdown relative inline-block cursor-pointer">
+                        <button
+                            class="text-black hover:text-gray-600 cursor-pointer hover:transition hover:duration-300">Resources</button>
+                        <div
+                            class="dropdown-content absolute bg-[#fff] shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(0,0,0,0.2)] z-1 rounded-lg w-[250px] mt-2 font-normal -left-[60px]">
+                            <div class="w-3 h-3 rotate-45 bg-white relative -top-[6px] left-[88px]"></div>
+                            <div class="flex p-3 w-full">
+
+                                <div class="mx-6">
+                                    <h2 class="text-black font-extrabold text-sm">FOR PRACTITIONERS</h2>
+                                    <div class="mt-4">
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Quick Start
+                                            Guide</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm"
+                                            href="#">Documentation</a>
+                                        <a class="text-black py-2 pr-4 block no-underline hover:text-[#9FE870] text-sm mt-6"
+                                            href="#">Blog</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="flex lg:w-[40%] md:w-[50%] justify-end items-center">
+            <nav class="w-auto flex gap-6 mx-4 items-center">
+                <div class="hidden md:flex justify-end items-center gap-6">
+                    <!-- Dropdown menu for language-->
+                    <div class="dropdown relative inline-block cursor-pointer">
+                        <button class="text-black flex font-normal hover:transition hover:duration-300">ENG<svg
+                                class="hover:rotate-180 w-4 h-4 mt-1 ml-1 text-black" aria-hidden="true" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <div class="dropdown-content absolute bg-[#262A36] shadow-[0_0_4px_rgb(0,0,0,0.1),0_6px_24px_rgb(0,0,0,0.2)] z-1 rounded-lg w-18 mt-0 font-normal">
+                            <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">ENG</a>
+                            <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">JPN</a>
+                            <a class="text-white py-2 px-4 block no-underline hover:text-[#9FE870]" href="#">IND</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Button -->
+            <a class="hidden md:flex mx-4 text-black hover:text-[#9FE870] font-normal" href="#">Login</a>
+            <button
+                class="hidden md:flex bg-[#9FE870] text-black-900 font-bold px-6 py-3 rounded-4xl w-[171px] mr-3 hover:bg-white hover:text-black hover:transition hover:duration-300">Request
+                a
+                Demo</button>
+        </div>
+        <!-- Hamburger Icon -->
+        <button id="menu-btn" class="z-[200] block hamburger xl:hidden focus:outline-none">
+            <span class="hamburger-top bg-white"></span>
+            <span class="hamburger-middle bg-white"></span>
+            <span class="hamburger-bottom bg-white"></span>
+        </button>
+
+
+        <!-- Mobile Menu -->
+        <nav id="menu"
+            class="hidden z-[150] bg-[#121212] h-screen w-full top-0 left-0 right-0 absolute flex-col font-bold drop-shadow-md pt-24 text-[#BEC7D0] font-normal text-3xl">
+            <div tabindex="0" href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+                <a class="block cursor-pointer" style="text-underline-offset: 8px;">Products</a>
+                <i class="cursor-pointer fa fa-angle-right"></i>
+            </div>
+            <div tabindex="0" href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+                <a class="block cursor-pointer" style="text-underline-offset: 8px;">Customers</a>
+                <i class="cursor-pointer fa fa-angle-right"></i>
+            </div>
+            <div tabindex="0" href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+                <a class="block cursor-pointer" style="text-underline-offset: 8px;">Solutions</a>
+                <i class="cursor-pointer fa fa-angle-right"></i>
+            </div>
+            <div tabindex="0" href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+                <a class="block cursor-pointer" style="text-underline-offset: 8px;">Partners</a>
+                <i class="cursor-pointer fa fa-angle-right"></i>
+            </div>
+            <div tabindex="0" href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+                <a class="block cursor-pointer" style="text-underline-offset: 8px;">Company</a>
+                <i class="cursor-pointer fa fa-angle-right"></i>
+            </div>
+            <div tabindex="0" href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 cursor-pointer flex items-center justify-between focus:outline-none focus:bg-[#262A36] transition duration-300">
+                <a class="block cursor-pointer" style="text-underline-offset: 8px;">Resources</a>
+                <i class="cursor-pointer fa fa-angle-right"></i>
+            </div>
+            <a href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 block md:hidden cursor-pointer transition duration-300  focus:outline-none focus:bg-[#262A36] transition duration-300"
+                style="text-underline-offset: 8px;">Login</a>
+            <a href="#"
+                class="px-[2.5rem] md:px-[2.1rem] py-5 block md:hidden cursor-pointer transition duration-300  focus:outline-none focus:bg-[#262A36] transition duration-300"
+                style="text-underline-offset: 8px;">Request a Demo</a>
+
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- Meet our Customer section -->
+            <div class="xl:px-[4.5rem] px-[2rem] mx-auto flex flex-col pt-20 pb-20">
+                <div class="w-full">
+                    <p class="text-[22px] text-black mx-5">
+                        <a href="../customer.html">Customer</a> <i class="mx-2 fa-solid fa-angle-right"></i> <span
+                            class="font-bold">Daido Steel</span>
+                    </p>
+                </div>
+                <div class="w-full mx-6">
+
+                    <div class="flex my-12">
+                        <div
+                            class="w-[240px] h-[240px] flex justify-center items-center border-2 rounded-lg border-[#dcdcdc]">
+                            <img class="w-1/2" src="../img/daido steel logo-01.png" alt="">
+                        </div>
+                        <div class="px-6 w-[70%] h-[240px]">
+                            <p class="text-[28px] font-semibold text-[#121212] mb-8 leading-9">Daido Steel partners with Sentient.io to improve false rejection rates by 10% through an AI Defect Detection System</p>
+                            <p class="text-[24px] font-semibold text-[#121212]">Industry</p>
+                            <span class="text-[16px]">Manufacturing</span>
+                        </div>
+                    </div>
+                    <div class="w-[70%]">
+                        <div class="my-12">
+                            <h2 class="font-bold text-[#121212] text-3xl">Company Background</h2>
+                            <p class="my-5 text-xl leading-7">Established in 1916, Daido Steel is a globally recognised Japanese steel manufacturing company with over a century of expertise.</p>
+                        </div>
+                        <div class="my-12">
+                            <h2 class="font-bold text-[#121212] text-3xl">Challenge</h2>
+                            <p class="my-5 text-xl leading-7">Initially relying on conventional image classification algorithms, potentially defective products would then be passed through an experimental deep learning system and human inspection. Daido Steel aimed to reduce false rejection rates without compromising on missed detection rates. A solution was needed to optimise their defect detection process and improve overall accuracy.</p>
+                        </div>
+                        <div class="my-12">
+                            <h2 class="font-bold text-[#121212] text-3xl">Solution</h2>
+                            <p class="my-5 text-xl leading-7">Sentient.io leveraged AI technology to develop a powerful defect detection system for Daido Steel. By training the AI algorithm with Daido’s images, it gained the ability to effectively identify and understand defects in Daido’s steel products. 
+                            </p>
+
+                        </div>
+                        <div class="my-12">
+                            <h2 class="font-bold text-[#121212] text-3xl">Value</h2>
+                            <p class="my-5 text-xl leading-7">With Sentient.io’s Defect Detection System, Daido Steel saw a 10% improvement in false rejection rates. By minimising the false rejection rates, Daido Steel could avoid unnecessary delays and expenses associated with the rejection of non-defective products.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!----------------------------- Solution made to last section ----------------------------------->
+             <div
+             style="background-size: 100% 100%;" class="xl:px-[4.5rem] px-[2rem] py-20 flex flex-col bg-[url('/img/Teamspaces-bg.png')] pb-20">
+                 <div class="w-full mx-auto lg:flex block">
+ 
+                     <div
+                         class="flex flex-col justify-center sm:flex-row sm:mt-10 mt-0  mx-auto lg:px-2 px-0  pb-10 items-center lg:w-[45%] w-full">
+ 
+                         <div class="sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 pr-10 text-center sm:text-left">
+                             <h1
+                                 class="text-left leading-snug text-white font-white md:text-[48px] text-3xl mb-4 font-black">
+                                 Solutions made to last</h1>
+                             <p class="text-left text-[24px] text-white leading-snug px-15">At Sentient.io, we are laser-focused on achieving your business goals with your budget in mind.</p>
+                             <p class="text-left text-[24px] text-white leading-snug px-15 my-6">Trust our rigorous solution development process and unyielding commitment to excellence for unmatched results.</p>
+
+                            </div>
+                     </div>
+ 
+                     <!-- automatic speech sec -->
+                     <div
+                         class="flex justify-center items-center overflow-hidden relative h-[350px] lg:w-[42%] mx-auto w-full">
+                         <img class="w-full h-full" src="../img/solutions-made.png" alt="">
+                     </div>
+                 </div>
+             </div>
+            <!-------------------------------------------------- Process flow section --------------------------------------------->
+            <section class="bg-[#f5f5f5] lg:py-[112px] py-[30px]">
+                <div class=" text-center">
+                    <h1
+                        class="sm:text-left sm:mx-20 mx-2 text-left leading-tight text-black-400 font-bold sm:text-[48px]  text-4xl mb-4 w-[50%]">
+                        Make the impossible possible within weeks, not years</h1>
+                    <!-- <p
+                        class="lg:w-[60%] md:w-[80%] w-[85%] mx-auto sm:text-center text-left text-black leading-snug sm:px-6 px-1 mb-12 text-2xl">
+                        We place
+                        the needs of our
+                        clients above
+                        everything else. We
+                        pride ourselves on ensuring every solution to our client’s needs can be met regardless of
+                        complexity. Here
+                        is
+                        exactly how we achieve this!</p> -->
+                    <div class="lg:flex block justify-center sm:mx-20 mx-2 mb-10">
+                        <!-- Exec. Briefing Start -->
+                        <div
+                            class="relative bg-[#57B01C] lg:rounded-bl-lg rounded-tl-lg flex lg:flex-col flex-row items-center group lg:w-[15%] md:w-[100%] w-[99%]">
+                            <h2
+                                class="text-left popover__title  text-white lg:py-4 py-2 px-4 w-[80%] lg:h-20 h-16 leading-normal font-bold">
+                                Business Need <br> Analysis
+
+                            </h2>
+                            <div
+                                class="absolute lg:bottom-11 bottom-6 w-[250px] flex flex-col items-center hidden lg:mb-20 mb-8 group-hover:flex">
+                                <span
+                                    class="relative rounded-lg z-10 text-left p-2 text-sm leading-tight text-black whitespace-no-wrap bg-white">Discussion
+                                    of solution parameters and success conditions</span>
+                                <div class="w-3 h-3 -mt-2 rotate-45 bg-white relative -left-[30%]"></div>
+                            </div>
+                            <div
+                                class="lg:rounded-bl-lg text-left bg-[#fff] lg:w-[100%] w-[20%] border border-white border-r-0 lg:py-3 py-5 sm:pl-4 pl-2">
+                                3 Hours</div>
+                        </div>
+                        <!-- Exec. Briefing End  -->
+                        <!-- Technology Assessment Start -->
+
+                        <div
+                            class="bg-[#5CBA1E] relative flex lg:flex-col flex-row items-start group lg:w-[20%] md:w-[100%] w-[99%]">
+                            <h2
+                                class="text-left popover__title  text-white lg:py-4 py-2 px-4 w-[80%] lg:h-20 h-16 leading-normal font-bold">
+                                Technology<br>
+                                Assessment</h2>
+                            <div
+                                class="absolute lg:bottom-11 bottom-6 w-[250px] flex flex-col items-center hidden lg:mb-20 mb-8 group-hover:flex">
+                                <span
+                                    class="relative rounded-lg z-10 text-left p-2 text-sm leading-tight  text-black whitespace-no-wrap bg-white">Consideration
+                                    of solution gallery and existing solutions</span>
+                                <div class="w-3 h-3 -mt-2 rotate-45 bg-white relative -left-[30%]"></div>
+                            </div>
+                            <div
+                                class="text-left border bg-[#fff] lg:w-[100%] w-[20%] border-r-0 lg:py-3 py-5 sm:pl-4 pl-2">
+                                1-2 Weeks
+                            </div>
+                        </div>
+                        <!-- Technology Assessment End  -->
+
+                        <!-- Production Trial Start -->
+
+                        <div
+                            class="bg-[#61C51F] relative flex lg:flex-col flex-row items-start group lg:w-[40%] md:w-[100%] w-[99%]">
+                            <h2
+                                class="text-left popover__title text-white lg:py-4 py-2 px-4 w-[80%] lg:h-20 h-16 leading-normal font-bold">
+                                Production<br>
+                                Trial</h2>
+                            <div
+                                class="absolute lg:bottom-11 bottom-6 w-[250px] flex flex-col items-center hidden lg:mb-20 mb-8 group-hover:flex">
+                                <span
+                                    class="relative rounded-lg z-10 text-left p-2 text-sm leading-tight text-black whitespace-no-wrap bg-white">Trial
+                                    of
+                                    solution and testing </span>
+                                <div class="w-3 h-3 -mt-2 rotate-45 bg-white relative -left-[30%]"></div>
+                            </div>
+                            <div
+                                class="text-left border bg-[#fff] lg:w-[100%] w-[20%] border-r-0 lg:py-3 py-5 sm:pl-4 pl-2">
+                                3 Months
+                            </div>
+                        </div>
+                        <!-- Production Trial End  -->
+                        <!-- Deployment Start -->
+                        <div
+                            class="relative bg-[#66CF21] lg:rounded-br-lg rounded-tr-lg flex lg:flex-col flex-row items-center group lg:w-[25%] md:w-[100%] w-[99%]">
+                            <h2
+                                class="text-left popover__title  text-white lg:py-4 py-2 px-4 lg:w[100%] w-[80%] lg:h-20 h-16 leading-normal font-bold">
+                                Deployment</h2>
+                            <div
+                                class="absolute lg:lg:bottom-11 bottom-6 bottom-6 flex flex-col items-center w-[250px] hidden lg:mb-20 mb-8 group-hover:flex">
+                                <span
+                                    class="rounded-lg relative z-10 text-left p-2 text-sm leading-tight text-black whitespace-no-wrap bg-white">Running
+                                    of
+                                    solution based on use case - platform deployment, project deployment.</span>
+                                <div class="w-3 h-3 -mt-2 rotate-45 bg-white relative -left-[30%]"></div>
+                            </div>
+                            <div
+                                class="lg:rounded-br-lg text-left bg-[#fff] lg:w-[100%] w-[20%] border border-r-0 lg:py-3 py-5 sm:pl-4 pl-2">
+                                2-3 Weeks</div>
+                        </div>
+                        <!-- Deployment End  -->
+                    </div>
+                </div>
+            </section>
+
+            <!-------------------------------------------- Ready to enter the world ----------------------------------->
+            <div class="px-5 py-32 mx-auto flex flex-col ready-to-enter">
+                <div class="lg:w-[70%] mx-auto">
+
+                    <div class="flex flex-col justify-center sm:flex-row  mt-0 w-full sm:px-8 pb-10">
+
+                        <div class="w-full sm:w-[90%] sm:w-2/3  mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                            <!-- <h1 class="sm:text-center text-left leading-tight text-white text-5xl font-bold mb-4">Learn more about how we can help
+              </h1> -->
+                            <p class="sm:text-center text-left text-white text-2xl leading-snug lg:mx-16 mx-1">
+                                Sentient.io’s priority is our clients foremost, we aim to ensure that not only do we
+                                provide a solution that meets your expectations, it also fits within your budget. Take
+                                this journey alongside us to see how you can harness AI for your business needs!</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mb-10">
+
+                        <button
+                            class="bg-[#9FE870] w-[185px] text-xl text-black-900 font-bold md:mb-0 mb-4 mx-5 px-6 py-4 rounded-full hover:transition hover:duration-300 hover:bg-white hover:text-black">Contact
+                            Us</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-------------------------------------- Footer section -------------------------------------->
+    <footer class="bg-[#F3F3F3] flex-col lg:pb-[50px] lg:pt-[112px] xl:px-[70px] px-[1.5rem] pb-[3.3rem] pt-[5.875rem]">
+        <!-------------------------------------- Top of Footer -------------------------------------->
+        <div class="flex flex-col lg:flex-row justify-between">
+            <!-------------------------------------- Left Top of Footer -------------------------------------->
+            <div>
+                <div class="mb-[1.1rem]">
+                    <img class="w-[200px]" src="../img/logo1.png" alt="">
+                </div>
+                <div class="mb-[1.1rem] flex pl-6 md:pl-4 my-[0.5rem]">
+                    <div><img class="w-4 mr-4" src="../img/location icon.png" alt=""></div>
+                    <div class="text-[#525252] text-xl md:text-base">
+                        <p class="mb-[0.7rem]">3 Fusionopolis Place,</p>
+                        <p class="mb-[0.7rem]">#03-56 Galaxis Work Lofts</p>
+                        <p>Singapore 138523</p>
+                    </div>
+                </div>
+                <div class="w-full flex text-center pl-6 md:pl-4">
+                    <div>
+                        <img class="w-4 mr-4 mt-2" src="../img/mail icon.png" alt="">
+                    </div>
+                    <p class="text-[#525252] text-xl md:text-base">enquiry@sentient.io</p>
+                </div>
+            </div>
+            <!-------------------------------------- Right Top of Footer -------------------------------------->
+            <div class="flex flex-col lg:flex-row pl-6 md:pl-4 lg:pl-0 pt-[3.6rem] lg:pt-0">
+                <div class="lg:mr-[5rem]">
+                    <div class="pb-3 lg:pb-2 flex items-center justify-between lg:justify-start">
+                        <p><a class="text-[#121212] font-bold text-xl md:text-base">PLATFORM</a></p>
+                        <button id="footer-platform-btn" class="foot block lg:hidden">
+                            <span class="arrow"></span>
+                        </button>
+                    </div>
+                    <div id="footer-platform"
+                        class="hidden-footer lg:opacity-100 lg:block text-[#525252] text-xl md:text-base">
+                        <p class="py-1.5"><a href="#">Build & Deploy</a></p>
+                        <p class="py-1.5"><a href="#">Collaborate</a></p>
+                        <p class="pt-1.5 pb-4 lg:py-1.5"><a href="#">ML Workflows</a></p>
+                    </div>
+                </div>
+                <div class="lg:mr-[5rem]">
+                    <div class="pb-3 pt-6 lg:pt-0 lg:pb-2 flex items-center justify-between lg:justify-start">
+                        <p><a class="text-[#121212] font-bold text-xl md:text-base">COMPANY</a></p>
+                        <button id="footer-company-btn" class="foot block lg:hidden">
+                            <span class="arrow"></span>
+                        </button>
+                    </div>
+                    <div id="footer-company"
+                        class="hidden-footer lg:opacity-100 lg:block text-[#525252] text-xl md:text-base">
+                        <p class="py-1.5"><a href="#">About Us</a></p>
+                        <p class="py-1.5"><a href="#">Our Team</a></p>
+                        <p class="py-1.5"><a href="#">Press Releases</a></p>
+                        <p class="py-1.5"><a href="#">Investors</a></p>
+                        <p class="py-1.5"><a href="#">Careers</a></p>
+                        <p class="py-1.5"><a href="#">Contact Us</a></p>
+
+                    </div>
+                </div>
+                <div class="">
+                    <div class="pb-3 pt-6 lg:pt-0 lg:pb-2 flex items-center justify-between lg:justify-start">
+                        <p><a class="text-[#121212] font-bold text-xl md:text-base">RESOURCE</a></p>
+                        <button id="footer-resources-btn" class="foot block lg:hidden">
+                            <span class="arrow"></span>
+                        </button>
+                    </div>
+                    <div id="footer-resources"
+                        class="hidden-footer lg:opacity-100 lg:block text-[#525252] text-xl md:text-base">
+                        <p class="py-1.5"><a href="#">Quick Start Guide</a></p>
+                        <p class="py-1.5"><a href="#">Documentation</a></p>
+                        <p class="py-1.5"><a href="#">Blog</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------- Bottom of Footer -------------------------------------->
+        <div class="flex justify-between mt-[8.25rem]">
+            <div class="pl-6 md:pl-4">
+                <p class="text-[#525252] text-xl md:text-[15px]">Copyright © 2023 Sentient.io</p>
+            </div>
+            <div class="flex justify-center items-center text-xl md:text-[15px]">
+                <p class="text-[#525252] mr-6">Privacy Policy</p>
+                <img class="w-6 mr-6" src="../img/Vector (2).png" alt="">
+                <img class="w-6 mr-6" src="../img/Group 67.png" alt="">
+                <img class="w-6 mr-6" src="../img/Group 68.png" alt="">
+                <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-[10px] mx-2 text-sm fa fa-brands fa-facebook-f"></i> -->
+                <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-2 mx-2 text-sm fa fa-brands fa-youtube"></i> -->
+                <!-- <i class="bg-[#525252] rounded-full py-1 text-white px-2 mx-2 text-sm fa fa-brands fa-linkedin-in"></i> -->
+            </div>
+        </div>
+    </footer>
+    <script>
+
+        // ----------------------------------------- Mobile view header script -------------------------------------
+        const btn = document.getElementById('menu-btn')
+        const nav = document.getElementById('menu')
+
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('open')
+            nav.classList.toggle('hidden')
+        })
+
+        // ----------------------------- Success stories next and prev slide script ----------------------------------
+        const slidesContainer = document.querySelector(".slides-container");
+        const slideWidth = slidesContainer.querySelector(".slide").clientWidth;
+        const prevButton = document.querySelector(".prev");
+        const nextButton = document.querySelector(".next");
+
+        nextButton.addEventListener("click", () => {
+            slidesContainer.scrollLeft += slideWidth;
+        });
+
+        prevButton.addEventListener("click", () => {
+            slidesContainer.scrollLeft -= slideWidth;
+        });
+
+        slidesContainer.addEventListener("scroll", () => {
+            if (slidesContainer.scrollLeft === 0) {
+                prevButton.classList.add("bg-gray-200");
+            } else {
+                prevButton.classList.remove("bg-gray-200");
+                prevButton.classList.add("bg-black");
+            }
+
+            if (slidesContainer.scrollLeft + slidesContainer.offsetWidth >= slidesContainer.scrollWidth) {
+                nextButton.classList.add("bg-gray-200");
+            } else {
+                nextButton.classList.remove("bg-gray-200");
+            }
+        });
+
+        // ----------------------------- Hear from Our Customers next and prev slide script ----------------------------------
+        const slidesContainer1 = document.querySelector(".slides-container1");
+        const slideWidth1 = slidesContainer1.querySelector(".slide1").clientWidth;
+        const prevButton1 = document.querySelector(".prev1");
+        const nextButton1 = document.querySelector(".next1");
+
+        nextButton1.addEventListener("click", () => {
+            slidesContainer1.scrollLeft += slideWidth1;
+        });
+
+        prevButton1.addEventListener("click", () => {
+            slidesContainer1.scrollLeft -= slideWidth1;
+        });
+
+        slidesContainer1.addEventListener("scroll", () => {
+            if (slidesContainer1.scrollLeft === 0) {
+                prevButton1.classList.add("bg-gray-200");
+            } else {
+                prevButton1.classList.remove("bg-gray-200");
+                prevButton1.classList.add("bg-black");
+            }
+
+            if (slidesContainer1.scrollLeft + slidesContainer1.offsetWidth >= slidesContainer1.scrollWidth) {
+                nextButton1.classList.add("bg-gray-200");
+            } else {
+                nextButton1.classList.remove("bg-gray-200");
+            }
+        });
+
+        // ----------------------------------------- iPad and Mobile Footer script -------------------------------------
+        const footerP = document.getElementById('footer-platform-btn')
+        const infoP = document.getElementById('footer-platform')
+
+        footerP.addEventListener('click', () => {
+            footerP.classList.toggle('open')
+            if (infoP.classList.contains('hidden-footer')) {
+                infoP.classList.remove('hidden-footer')
+                infoP.classList.add('visible-footer')
+            } else {
+                infoP.classList.remove('visible-footer')
+                infoP.classList.add('hidden-footer')
+            }
+        })
+
+        const footerC = document.getElementById('footer-company-btn')
+        const infoC = document.getElementById('footer-company')
+
+        footerC.addEventListener('click', () => {
+            footerC.classList.toggle('open')
+            if (infoC.classList.contains('hidden-footer')) {
+                infoC.classList.remove('hidden-footer')
+                infoC.classList.add('visible-footer')
+            } else {
+                infoC.classList.remove('visible-footer')
+                infoC.classList.add('hidden-footer')
+            }
+        })
+
+        const footerR = document.getElementById('footer-resources-btn')
+        const infoR = document.getElementById('footer-resources')
+
+        footerR.addEventListener('click', () => {
+            footerR.classList.toggle('open')
+            if (infoR.classList.contains('hidden-footer')) {
+                infoR.classList.remove('hidden-footer')
+                infoR.classList.add('visible-footer')
+            } else {
+                infoR.classList.remove('visible-footer')
+                infoR.classList.add('hidden-footer')
+            }
+        })
+    </script>
+
+    <script src="js/demoAppScripts.js"></script>
+</body>
+
+</html>
